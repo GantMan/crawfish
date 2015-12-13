@@ -16,3 +16,5 @@ const metrics = {
     small: 12
   }
 }
+
+export default metrics
