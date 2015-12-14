@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "lodash": "^3.10.1",
-    "react-native": "^0.16.0"
+    "react-native": "exponentjs/react-native#2015-11-13"
   },
   "standard": {
     "parser": "babel-eslint"
