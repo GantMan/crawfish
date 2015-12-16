@@ -1,45 +1,24 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict'
 
-import React, {StyleSheet, Text, View} from 'react-native'
+import React, {View, Navigator} from 'react-native'
+import {Router, Routes, NavigationBar} from './Navigation/'
 
 export default class Crawfish extends React.Component {
+  constructor (props) {
+    super(props)
+    console.log(Routes, Router, NavigationBar)
+  }
 
   render () {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native! ES2015
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
+      <View style={{flex: 1}}>
+        <Navigator
+          initialRoute={Routes.MainScreen}
+          renderScene={Router.renderScene}
+          navigationBar={NavigationBar.render()}
+        />
       </View>
     )
   }
 }
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
-  }
-})
