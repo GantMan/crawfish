@@ -7,4 +7,11 @@ export default new class Routes {
       component: require('../Screens/MainScreen')
     }
   }
+
+  get VenuesListScreen () {
+    return {
+      title: 'CRAWFISH',
+      component: require('../Screens/VenuesListScreen')
+    }
+  }
 }

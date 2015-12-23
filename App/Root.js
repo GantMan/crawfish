@@ -13,7 +13,7 @@ export default class Crawfish extends React.Component {
     return (
       <View style={{flex: 1}}>
         <Navigator
-          initialRoute={Routes.MainScreen}
+          initialRoute={Routes.VenuesListScreen}
           renderScene={Router.renderScene}
           navigationBar={NavigationBar.render()}
         />
