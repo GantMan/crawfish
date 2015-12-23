@@ -1,7 +1,7 @@
 'use strict'
 
-import React, { View, ScrollView, ListView, TouchableOpacity, Text } from 'react-native'
-import { Routes } from '../Navigation/'
+import React, { ScrollView, ListView, TouchableOpacity, Image } from 'react-native'
+// import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 
@@ -34,8 +34,11 @@ export default class VenuesListScreen extends React.Component {
     return (
       <TouchableOpacity onPress={this.cellPress.bind(this, rowData)}>
         <VenueCell
-        imageUri='https://i.ytimg.com/vi/UIrEM_9qvZU/maxresdefault.jpg'
-        title='HEYYYYY'
+        imageUri='http://static1.squarespace.com/static/5593fe3ae4b0e661aff7b9dc/55b8e418e4b05042d5b9abd7/55ca49bce4b03dbaa0747b42/1440595367465/?format=1500w'
+        // imageUri='https://i.ytimg.com/vi/UIrEM_9qvZU/maxresdefault.jpg'
+        title="Harry's House of Seafood"
+        distance='2.12 mi'
+        priceBoiled='$3.50'
         />
       </TouchableOpacity>
     )
@@ -44,12 +47,14 @@ export default class VenuesListScreen extends React.Component {
   render () {
     let bob = ['Tom', 'Dick', 'Harry']
     return (
-      <ScrollView style={styles.container}>
-        <ListView
-          dataSource={this.state.dataSource.cloneWithRows(bob)}
-          renderRow={this.customRowRender.bind(this)}
-        />
-      </ScrollView>
+      <Image source={require('../Images/lightWood.jpg')}>
+        <ScrollView style={styles.container}>
+          <ListView
+            dataSource={this.state.dataSource.cloneWithRows(bob)}
+            renderRow={this.customRowRender.bind(this)}
+          />
+        </ScrollView>
+      </Image>
     )
   }
 }

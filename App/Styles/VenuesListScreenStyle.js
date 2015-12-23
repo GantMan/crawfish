@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Fonts, Colors, Metrics } from '../Themes/'
+import { Metrics } from '../Themes/'
 
 export default StyleSheet.create({
   logo: {
@@ -15,7 +15,7 @@ export default StyleSheet.create({
     bottom: 50
   },
   container: {
-    marginTop: Metrics.navBarHeight,
+    marginTop: Metrics.navBarHeight
   },
   screenContent: {
     flex: 1,
