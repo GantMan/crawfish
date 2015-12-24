@@ -2,6 +2,7 @@
 
 import React, { View, Text, Image, TouchableHighlight } from 'react-native'
 import Images from '../Themes'
+import { Routes } from '../Navigation/'
 // import _ from 'lodash'
 
 import styles from '../Styles/VenueCellStyle'
@@ -14,11 +15,13 @@ export default class VenueCell extends React.Component {
     subtitle: React.PropTypes.string,
     distance: React.PropTypes.string,
     priceBoiled: React.PropTypes.string,
-    pressDirections: React.PropTypes.func
+    pressDirections: React.PropTypes.func,
+    navigator: React.PropTypes.object
   }
 
   pressDirections () {
     window.alert('HELLOOOOOO')
+    this.props.navigator.push(Routes.DetailsScreen)
   }
 
   shouldComponentUpdate (newProps, newState) {

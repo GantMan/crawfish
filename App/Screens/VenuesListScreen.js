@@ -1,7 +1,7 @@
 'use strict'
 
 import React, { ScrollView, ListView, TouchableOpacity, Image } from 'react-native'
-// import { Routes } from '../Navigation/'
+import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 
@@ -25,9 +25,7 @@ export default class VenuesListScreen extends React.Component {
   }
 
   cellPress (rowData) {
-    // this.props.dispatch(setSubjectId(Number(rowData.subjectId)))
-    window.alert('Open Details Screen')
-    // this.props.navigator.push(Routes.SubjectDetailsScreen)
+    this.props.navigator.push(Routes.DetailsScreen)
   }
 
   customRowRender (rowData) {

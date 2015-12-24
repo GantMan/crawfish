@@ -12,5 +12,7 @@ export default StyleSheet.create({
   image: {
     flex: 1,
     position: 'absolute'
+    // width: Metrics.screenWidth,
+    // height: Metrics.screenHeight
   }
 })
