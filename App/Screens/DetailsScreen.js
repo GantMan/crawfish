@@ -1,6 +1,6 @@
 'use strict'
 
-import React, { ScrollView, View, TouchableHighlight, Image, Text, TextInput } from 'react-native'
+import React, { ScrollView, View, MapView, TouchableHighlight, Image, Text, TextInput } from 'react-native'
 // import { Routes } from '../Navigation/'
 import styles from '../Styles/DetailsScreenStyle'
 
@@ -8,7 +8,9 @@ export default class DetailsScreen extends React.Component {
 
   static propTypes = {
     navigator: React.PropTypes.object,
-    dispatch: React.PropTypes.func
+    dispatch: React.PropTypes.func,
+    latitude: React.PropTypes.string,
+    longitude: React.PropTypes.string
   }
 
   render () {
@@ -16,9 +18,18 @@ export default class DetailsScreen extends React.Component {
       <View style={styles.background}>
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
         <ScrollView>
-          <View style={styles.mapContainer}>
-            <Image style={styles.image} source={require('../Images/newspaper.jpg')}/>
-          </View>
+            <MapView style={styles.mapContainer}
+              scrollEnabled = {false}
+              region = {{
+                latitude: 29.95,
+                longitude: -90.1,
+                latitudeDelta: 0.15,
+                longitudeDelta: 0.15
+              }}
+              annotations={[
+                {latitude: 29.95, longitude: -90.1}
+              ]}
+            />
 
           <View style={styles.detailsContainer}>
             <View style={styles.headerContainer}>
