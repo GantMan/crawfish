@@ -13,50 +13,51 @@ export default class DetailsScreen extends React.Component {
 
   render () {
     return (
-      <ScrollView>
+      <View style={styles.background}>
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
-        <View style={styles.mapContainer}>
-          <Image style={styles.image} source={require('../Images/newspaper.jpg')}/>
-        </View>
-
-        <View style={styles.detailsContainer}>
-          <View style={styles.headerContainer}>
-            <Text allowFontScaling={false} style={styles.header}>DETAILS</Text>
-          </View>
-          <View style={styles.labelContainer}>
-            <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
-            <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
-          </View>
-          <View style={styles.labelContainer}>
-            <Text allowFontScaling={false} style={styles.boldLabel}>Phone</Text>
-            <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
-          </View>
-          <View style={styles.labelContainer}>
-            <Text allowFontScaling={false} style={styles.boldLabel}>Email</Text>
-            <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
-          </View>
-          <View style={styles.labelContainer}>
-            <Text allowFontScaling={false} style={styles.boldLabel}>Website</Text>
-            <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+        <ScrollView>
+          <View style={styles.mapContainer}>
+            <Image style={styles.image} source={require('../Images/newspaper.jpg')}/>
           </View>
 
-          <View style={styles.line}/>
+          <View style={styles.detailsContainer}>
+            <View style={styles.headerContainer}>
+              <Text allowFontScaling={false} style={styles.header}>DETAILS</Text>
+            </View>
+            <View style={styles.labelContainer}>
+              <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
+              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+            </View>
+            <View style={styles.labelContainer}>
+              <Text allowFontScaling={false} style={styles.boldLabel}>Phone</Text>
+              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+            </View>
+            <View style={styles.labelContainer}>
+              <Text allowFontScaling={false} style={styles.boldLabel}>Hours</Text>
+              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+            </View>
+            <View style={styles.labelContainer}>
+              <Text allowFontScaling={false} style={styles.boldLabel}>Rating</Text>
+              <Text allowFontScaling={false} style={styles.dataLabel}>* * * *</Text>
+            </View>
 
-          <TextInput
-            style={styles.discrepancyContainer}
-            placeholder='Enter New Price'
-            placeholderColor='red'
-            textAlign='center'
-          />
-          <TouchableHighlight
-            style={styles.submitButton}
-            underlayColor='red'
-          >
-            <Text allowFontScaling={false} style={{color: 'white', fontSize: 16}}>Submit</Text>
-          </TouchableHighlight>
+            <View style={styles.line}/>
 
-        </View>
-      </ScrollView>
+            <TextInput
+              style={styles.discrepancyContainer}
+              placeholder='Enter New Price'
+              placeholderColor='red'
+              textAlign='center'
+            />
+            <TouchableHighlight
+              style={styles.submitButton}
+              underlayColor='red'
+            >
+              <Text allowFontScaling={false} style={{color: 'white', fontSize: 16}}>Submit</Text>
+            </TouchableHighlight>
+          </View>
+        </ScrollView>
+      </View>
     )
   }
 }

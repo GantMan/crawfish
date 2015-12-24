@@ -2,6 +2,18 @@ import { StyleSheet } from 'react-native'
 import { Metrics, Colors, Fonts } from '../Themes/'
 
 export default StyleSheet.create({
+  background: {
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    position: 'absolute'
+  },
+  backgroundImage: {
+    flex: 1,
+    position: 'absolute',
+    resizeMode: 'stretch'
+  },
   headerContainer: {
     marginTop: 10,
     marginBottom: 10,
@@ -70,11 +82,6 @@ export default StyleSheet.create({
   image: {
     flex: 1,
     width: Metrics.screenWidth - 20
-  },
-  backgroundImage: {
-    flex: 1,
-    position: 'absolute',
-    width: Metrics.screenWidth
   },
   labelContainer: {
     alignItems: 'center',
