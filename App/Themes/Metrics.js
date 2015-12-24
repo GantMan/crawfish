@@ -9,11 +9,14 @@ const metrics = {
   baseMargin: 10,
   screenWidth: width,
   screenHeight: height,
+  navBarHeight: 64,
   fonts: {
     title: 36,
     normal: 24,
     input: 18,
-    small: 12
+    medium: 16,
+    small: 14,
+    tiny: 10
   }
 }
 
