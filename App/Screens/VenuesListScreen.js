@@ -43,18 +43,18 @@ export default class VenuesListScreen extends React.Component {
       </TouchableOpacity>
     )
   }
-
+// <Image source={require('../Images/lightWood.jpg')}>
   render () {
-    let bob = ['Tom', 'Dick', 'Harry']
+    let bob = ['Tom', 'Dick', 'Harry', 'Tom', 'Dick', 'Harry']
     return (
-      <Image source={require('../Images/lightWood.jpg')}>
-        <ScrollView style={styles.container}>
-          <ListView
-            dataSource={this.state.dataSource.cloneWithRows(bob)}
-            renderRow={this.customRowRender.bind(this)}
-          />
-        </ScrollView>
-      </Image>
+      <ScrollView>
+        <Image style={styles.image} source={require('../Images/lightWood.jpg')}/>
+        <ListView
+          style={styles.listy}
+          dataSource={this.state.dataSource.cloneWithRows(bob)}
+          renderRow={this.customRowRender.bind(this)}
+        />
+      </ScrollView>
     )
   }
 }

@@ -17,7 +17,7 @@ export default {
 
   Title (route, navigator, index, navState) {
     return (
-      <Text>
+      <Text allowFontScaling={false}>
         {navState.title || route.title}
       </Text>
     )

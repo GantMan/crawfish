@@ -5,6 +5,7 @@ import { Fonts, Colors, Metrics } from '../Themes/'
 
 export default StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: 'row',
     marginTop: 10,
     marginHorizontal: 10,

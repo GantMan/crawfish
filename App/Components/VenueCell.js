@@ -18,7 +18,7 @@ export default class VenueCell extends React.Component {
   }
 
   pressDirections () {
-    window.alert('HELLOOOOOOo')
+    window.alert('HELLOOOOOO')
   }
 
   shouldComponentUpdate (newProps, newState) {
@@ -31,19 +31,19 @@ export default class VenueCell extends React.Component {
         <View style={styles.backgroundContainer}>
           <Image style={styles.myImage} source={{uri: this.props.imageUri}} defaultSource={Images.logo}/>
           <View style={styles.detailsContainer}>
-            <Text style={styles.priceBoiled}>{this.props.priceBoiled}</Text>
+            <Text allowFontScaling={false} style={styles.priceBoiled}>{this.props.priceBoiled}</Text>
             <TouchableHighlight
-              onPress={this.props.pressDirections}
+              onPress={this.pressDirections}
               underlayColor='rgba(255,255,255,0.5)'
               style={styles.button}
             >
-            <Text style={styles.buttonText}>Directions</Text>
+            <Text allowFontScaling={false} style={styles.buttonText}>Directions</Text>
             </TouchableHighlight>
           </View>
         </View>
         <View style={styles.overlayContainer}>
-          <Text style={styles.title}>{this.props.title}</Text>
-          <Text style={styles.distance}>{this.props.distance}</Text>
+          <Text allowFontScaling={false} style={styles.title}>{this.props.title}</Text>
+          <Text allowFontScaling={false} style={styles.distance}>{this.props.distance}</Text>
         </View>
       </View>
     )
