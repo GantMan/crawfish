@@ -14,4 +14,11 @@ export default new class Routes {
       component: require('../Screens/VenuesListScreen')
     }
   }
+
+  get DetailsScreen () {
+    return {
+      title: 'DETAILS',
+      component: require('../Screens/DetailsScreen')
+    }
+  }
 }

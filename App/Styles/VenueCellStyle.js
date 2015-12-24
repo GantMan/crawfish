@@ -7,9 +7,16 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    marginTop: 10,
+    marginBottom: 20,
     marginHorizontal: 10,
-    width: Metrics.screenWidth - 20
+    width: Metrics.screenWidth - 20,
+    shadowColor: Colors.black,
+    shadowOffset: {
+      height: 7,
+      width: 7
+    },
+    shadowOpacity: 0.55,
+    shadowRadius: 2
   },
   myImage: {
     flex: 7,
