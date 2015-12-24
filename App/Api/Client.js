@@ -4,13 +4,9 @@ import Superagent from 'superagent'
 import Response from './Response'
 
 const ENDPOINT = 'https://www.wheredatcrawfish.com/'
-const API_VERSION = null
+const API_VERSION = 1
 
 export default class Client {
-
-  constructor (subdomain = '') {
-    this.subdomain = subdomain
-  }
 
   get fullDomain () {
     let uri = ENDPOINT
