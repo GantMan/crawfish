@@ -19,7 +19,5 @@ export default StyleSheet.create({
   backgroundImage: {
     flex: 1,
     position: 'absolute'
-    // width: Metrics.screenWidth,
-    // height: Metrics.screenHeight
   }
 })
