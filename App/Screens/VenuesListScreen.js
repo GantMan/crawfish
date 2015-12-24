@@ -1,6 +1,6 @@
 'use strict'
 
-import React, { ScrollView, ListView, TouchableOpacity, Image } from 'react-native'
+import React, { ScrollView, ListView, TouchableOpacity, Image, View } from 'react-native'
 import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
@@ -45,14 +45,16 @@ export default class VenuesListScreen extends React.Component {
   render () {
     let bob = ['Tom', 'Dick', 'Harry', 'Tom', 'Dick', 'Harry']
     return (
-      <ScrollView>
-        <Image style={styles.image} source={require('../Images/lightWood.jpg')}/>
-        <ListView
-          style={styles.listy}
-          dataSource={this.state.dataSource.cloneWithRows(bob)}
-          renderRow={this.customRowRender.bind(this)}
-        />
-      </ScrollView>
+      <View style={styles.background}>
+        <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
+        <ScrollView>
+          <ListView
+            style={styles.listy}
+            dataSource={this.state.dataSource.cloneWithRows(bob)}
+            renderRow={this.customRowRender.bind(this)}
+          />
+        </ScrollView>
+      </View>
     )
   }
 }
