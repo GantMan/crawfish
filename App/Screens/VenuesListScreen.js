@@ -35,6 +35,7 @@ export default class VenuesListScreen extends React.Component {
         imageUri='http://static1.squarespace.com/static/5593fe3ae4b0e661aff7b9dc/55b8e418e4b05042d5b9abd7/55ca49bce4b03dbaa0747b42/1440595367465/?format=1500w'
         // imageUri='https://i.ytimg.com/vi/UIrEM_9qvZU/maxresdefault.jpg'
         title="Harry's House of Seafood"
+        subtitle='5201 Metairie Rd.  •  Metairie'
         distance='2.12 mi'
         priceBoiled='$3.50'
         />
@@ -46,7 +47,9 @@ export default class VenuesListScreen extends React.Component {
     let bob = ['Tom', 'Dick', 'Harry', 'Tom', 'Dick', 'Harry']
     return (
       <View style={styles.background}>
+
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
+        <View style={styles.overlay}/>
         <ScrollView>
           <ListView
             style={styles.listy}

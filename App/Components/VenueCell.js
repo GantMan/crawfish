@@ -35,17 +35,14 @@ export default class VenueCell extends React.Component {
           <Image style={styles.myImage} source={{uri: this.props.imageUri}} defaultSource={Images.logo}/>
           <View style={styles.detailsContainer}>
             <Text allowFontScaling={false} style={styles.priceBoiled}>{this.props.priceBoiled}</Text>
-            <TouchableHighlight
-              onPress={this.pressDirections}
-              underlayColor='rgba(255,255,255,0.5)'
-              style={styles.button}
-            >
-            <Text allowFontScaling={false} style={styles.buttonText}>Directions</Text>
-            </TouchableHighlight>
+
           </View>
         </View>
         <View style={styles.overlayContainer}>
-          <Text allowFontScaling={false} style={styles.title}>{this.props.title}</Text>
+          <View style={styles.labelsContainer}>
+            <Text allowFontScaling={false} style={styles.title}>{this.props.title}</Text>
+            <Text allowFontScaling={false} numberOfLines={0} style={styles.subtitle}>{this.props.subtitle}</Text>
+          </View>
           <Text allowFontScaling={false} style={styles.distance}>{this.props.distance}</Text>
         </View>
       </View>

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Metrics } from '../Themes/'
+import { Metrics, Colors } from '../Themes/'
 
 export default StyleSheet.create({
   texty: {
@@ -19,5 +19,13 @@ export default StyleSheet.create({
   backgroundImage: {
     flex: 1,
     position: 'absolute'
+  },
+  overlay: {
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    position: 'absolute',
+    backgroundColor: Colors.transWhite
   }
 })
