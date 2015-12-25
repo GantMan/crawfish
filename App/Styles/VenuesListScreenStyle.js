@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   listy: {
     marginBottom: 20,
-    marginTop: Metrics.navBarHeight
+    marginTop: Metrics.navBarHeight + Metrics.baseMargin
   },
   backgroundImage: {
     flex: 1,
