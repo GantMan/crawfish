@@ -43,7 +43,7 @@ export default StyleSheet.create({
   },
   mapContainer: {
     flex: 1,
-    marginTop: Metrics.navBarHeight,
+    marginTop: Metrics.navBarHeight + Metrics.baseMargin,
     height: 200,
     width: Metrics.screenWidth - 20,
     justifyContent: 'center',
