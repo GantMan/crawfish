@@ -7,11 +7,7 @@ import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
 
 export default class VenuesListScreen extends React.Component {
-  // <SubjectsCell
-  //   title={rowData.name}
-  //   imageUri={rowData.thumbnail}
-  //   subtitle={rowData.type}
-  // />
+
   constructor (props) {
     super(props)
     let ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
@@ -36,8 +32,10 @@ export default class VenuesListScreen extends React.Component {
         <VenueCell
         imageUri={rowData.picture}
         title={rowData.name}
+        subtitle={rowData.address}
         distance={rowData.distance}
-        priceBoiled={rowData.crawfish}
+        priceBoiled={rowData.crawfish.boiled}
+        ratingUrl={rowData.rating_url}
         />
       </TouchableOpacity>
     )

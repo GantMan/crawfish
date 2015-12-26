@@ -12,6 +12,7 @@ export default class VenueCell extends React.Component {
   static propTypes = {
     title: React.PropTypes.string,
     imageUri: React.PropTypes.string,
+    ratingUrl: React.PropTypes.string,
     subtitle: React.PropTypes.string,
     distance: React.PropTypes.string,
     priceBoiled: React.PropTypes.string,
@@ -35,7 +36,7 @@ export default class VenueCell extends React.Component {
           <Image style={styles.myImage} source={{uri: this.props.imageUri}} defaultSource={Images.logo}/>
           <View style={styles.detailsContainer}>
             <Text allowFontScaling={false} style={styles.priceBoiled}>{this.props.priceBoiled}</Text>
-            <Image style={styles.stars} resizeMode='contain' source={{uri: 'http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png'}}/>
+            <Image style={styles.stars} resizeMode='contain' source={{uri: this.props.ratingUrl}}/>
           </View>
         </View>
         <View style={styles.overlayContainer}>
