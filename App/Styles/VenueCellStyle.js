@@ -21,7 +21,7 @@ export default StyleSheet.create({
   myImage: {
     flex: 8,
     width: Metrics.screenWidth - 20,
-    height: 90,
+    height: 100,
     alignSelf: 'center',
     justifyContent: 'center'
   },
@@ -38,31 +38,27 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   priceBoiled: {
-    color: Colors.fuckingYellow,
+    color: Colors.lightGreen,
     paddingTop: 11.25,
     fontSize: 20,
     fontFamily: Fonts.bold,
     justifyContent: 'center'
   },
-  button: {
-    marginTop: 10,
-    backgroundColor: Colors.orange,
-    marginHorizontal: 10,
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 40,
-    bottom: 0
+  leftOverlay: {
+    backgroundColor: Colors.transBlack,
+    height: 25,
+    top: 0,
+    left: 0,
+    position: 'absolute'
   },
-  buttonText: {
-    fontSize: 14,
-    color: Colors.white,
-    fontFamily: Fonts.base
+  stars: {
+    height: 25,
+    width: 70
   },
   overlayContainer: {
     flexDirection: 'row',
     backgroundColor: Colors.transBlack,
-    height: 45,
+    height: 40,
     bottom: 0,
     left: 0,
     position: 'absolute',

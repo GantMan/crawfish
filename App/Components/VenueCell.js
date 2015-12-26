@@ -35,7 +35,7 @@ export default class VenueCell extends React.Component {
           <Image style={styles.myImage} source={{uri: this.props.imageUri}} defaultSource={Images.logo}/>
           <View style={styles.detailsContainer}>
             <Text allowFontScaling={false} style={styles.priceBoiled}>{this.props.priceBoiled}</Text>
-
+            <Image style={styles.stars} resizeMode='contain' source={{uri: 'http://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png'}}/>
           </View>
         </View>
         <View style={styles.overlayContainer}>
@@ -45,6 +45,7 @@ export default class VenueCell extends React.Component {
           </View>
           <Text allowFontScaling={false} style={styles.distance}>{this.props.distance}</Text>
         </View>
+
       </View>
     )
   }
