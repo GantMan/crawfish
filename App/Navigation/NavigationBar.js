@@ -2,6 +2,7 @@
 
 import React from 'react-native'
 import NavigationBarRouteMapper from './NavigationBarRouteMapper'
+import styles from '../Styles/NavigationStyle'
 
 const { Navigator } = React
 
@@ -10,6 +11,7 @@ export default {
     return (
       <Navigator.NavigationBar
         routeMapper={NavigationBarRouteMapper}
+        style={styles.navigationBar}
       />
     )
   }

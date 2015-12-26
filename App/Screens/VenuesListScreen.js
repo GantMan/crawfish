@@ -4,6 +4,7 @@ import React, { ScrollView, ListView, TouchableOpacity, Image, View } from 'reac
 import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
+import {connect} from 'react-redux/native'
 
 export default class VenuesListScreen extends React.Component {
   // <SubjectsCell
@@ -21,7 +22,8 @@ export default class VenuesListScreen extends React.Component {
 
   static propTypes = {
     navigator: React.PropTypes.object,
-    dispatch: React.PropTypes.func
+    dispatch: React.PropTypes.func,
+    venueList: React.PropTypes.array
   }
 
   cellPress (rowData) {
@@ -32,19 +34,16 @@ export default class VenuesListScreen extends React.Component {
     return (
       <TouchableOpacity onPress={this.cellPress.bind(this, rowData)}>
         <VenueCell
-        imageUri='http://static1.squarespace.com/static/5593fe3ae4b0e661aff7b9dc/55b8e418e4b05042d5b9abd7/55ca49bce4b03dbaa0747b42/1440595367465/?format=1500w'
-        // imageUri='https://i.ytimg.com/vi/UIrEM_9qvZU/maxresdefault.jpg'
-        title="Harry's House of Seafood"
-        subtitle='5201 Metairie Rd.  •  Metairie'
-        distance='2.12 mi'
-        priceBoiled='$3.50'
+        imageUri={rowData.picture}
+        title={rowData.name}
+        distance={rowData.distance}
+        priceBoiled={rowData.crawfish}
         />
       </TouchableOpacity>
     )
   }
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
-    let bob = ['Tom', 'Dick', 'Harry', 'Tom', 'Dick', 'Harry']
     return (
       <View style={styles.background}>
 
@@ -53,7 +52,7 @@ export default class VenuesListScreen extends React.Component {
         <ScrollView>
           <ListView
             style={styles.listy}
-            dataSource={this.state.dataSource.cloneWithRows(bob)}
+            dataSource={this.state.dataSource.cloneWithRows(this.props.venueList)}
             renderRow={this.customRowRender.bind(this)}
           />
         </ScrollView>
@@ -62,16 +61,10 @@ export default class VenuesListScreen extends React.Component {
   }
 }
 
-// function mapStateToProps (state) {
-//   if (state.cases.subjectList === undefined) {
-//     return {
-//       caseId: state.cases.currentCaseId
-//     }
-//   }
-//   return {
-//     caseId: state.cases.currentCaseId,
-//     subjectList: state.cases.subjectList
-//   }
-// }
+function mapStateToProps (state) {
+  return {
+    venueList: state.venue.venueList
+  }
+}
 
-// export default connect(mapStateToProps)(SubjectsScreen)
+export default connect(mapStateToProps)(VenuesListScreen)

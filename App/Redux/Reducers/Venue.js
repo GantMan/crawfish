@@ -4,7 +4,7 @@ import { VenueActions } from '../Actions/Venue'
 
 // User shape
 const INITIAL_STATE = {
-  venues: [],
+  venueList: require('../../Fixtures/venues.json').venues,
   fetching: false
 }
 
