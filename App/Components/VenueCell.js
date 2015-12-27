@@ -46,6 +46,7 @@ export default class VenueCell extends React.Component {
           </View>
           <Text allowFontScaling={false} style={styles.distance}>{this.props.distance}</Text>
         </View>
+        <View style={styles.triangleCorner}/>
 
       </View>
     )

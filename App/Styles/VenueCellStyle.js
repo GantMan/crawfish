@@ -4,6 +4,17 @@ import { StyleSheet } from 'react-native'
 import { Fonts, Colors, Metrics } from '../Themes/'
 
 export default StyleSheet.create({
+  triangleCorner: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderRightWidth: 55,
+    borderTopWidth: 55,
+    borderRightColor: 'transparent',
+    borderTopColor: Colors.darkRed
+  },
   container: {
     flex: 1,
     flexDirection: 'row',
