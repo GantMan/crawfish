@@ -36,6 +36,7 @@ export default class VenuesListScreen extends React.Component {
         distance={rowData.distance}
         priceBoiled={rowData.crawfish.boiled}
         ratingUrl={rowData.rating_url}
+        favorite={rowData.favorite}
         />
       </TouchableOpacity>
     )

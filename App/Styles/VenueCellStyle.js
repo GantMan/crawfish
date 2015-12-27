@@ -4,17 +4,6 @@ import { StyleSheet } from 'react-native'
 import { Fonts, Colors, Metrics } from '../Themes/'
 
 export default StyleSheet.create({
-  triangleCorner: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    backgroundColor: 'transparent',
-    borderStyle: 'solid',
-    borderRightWidth: 55,
-    borderTopWidth: 55,
-    borderRightColor: 'transparent',
-    borderTopColor: Colors.darkRed
-  },
   container: {
     flex: 1,
     flexDirection: 'row',
@@ -28,6 +17,41 @@ export default StyleSheet.create({
     },
     shadowOpacity: 0.55,
     shadowRadius: 2
+  },
+  triangleCorner: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderRightWidth: 55,
+    borderTopWidth: 55,
+    borderRightColor: 'transparent',
+    borderTopColor: Colors.darkRed
+  },
+  favStarSelected: {
+    flex: 1,
+    position: 'absolute',
+    backgroundColor: 'clear',
+    bottom: 27,
+    left: 10,
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: Fonts.bold
+  },
+  favStarUnselected: {
+    flex: 1,
+    position: 'absolute',
+    backgroundColor: 'clear',
+    bottom: 27,
+    left: 10,
+    color: Colors.transBlack,
+    fontSize: 18,
+    fontFamily: Fonts.bold
+  },
+  starButton: {
+    top: 0,
+    left: 0
   },
   myImage: {
     flex: 8,
