@@ -12,6 +12,7 @@ export default class VenueCell extends React.Component {
   static propTypes = {
     title: React.PropTypes.string,
     imageUri: React.PropTypes.string,
+    ratingUrl: React.PropTypes.string,
     subtitle: React.PropTypes.string,
     distance: React.PropTypes.string,
     priceBoiled: React.PropTypes.string,
@@ -35,19 +36,17 @@ export default class VenueCell extends React.Component {
           <Image style={styles.myImage} source={{uri: this.props.imageUri}} defaultSource={Images.logo}/>
           <View style={styles.detailsContainer}>
             <Text allowFontScaling={false} style={styles.priceBoiled}>{this.props.priceBoiled}</Text>
-            <TouchableHighlight
-              onPress={this.pressDirections}
-              underlayColor='rgba(255,255,255,0.5)'
-              style={styles.button}
-            >
-            <Text allowFontScaling={false} style={styles.buttonText}>Directions</Text>
-            </TouchableHighlight>
+            <Image style={styles.stars} resizeMode='contain' source={{uri: this.props.ratingUrl}}/>
           </View>
         </View>
         <View style={styles.overlayContainer}>
-          <Text allowFontScaling={false} style={styles.title}>{this.props.title}</Text>
+          <View style={styles.labelsContainer}>
+            <Text allowFontScaling={false} style={styles.title}>{this.props.title}</Text>
+            <Text allowFontScaling={false} numberOfLines={0} style={styles.subtitle}>{this.props.subtitle}</Text>
+          </View>
           <Text allowFontScaling={false} style={styles.distance}>{this.props.distance}</Text>
         </View>
+
       </View>
     )
   }
