@@ -14,6 +14,14 @@ export default StyleSheet.create({
     position: 'absolute',
     resizeMode: 'stretch'
   },
+  overlay: {
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    position: 'absolute',
+    backgroundColor: Colors.transWhite
+  },
   headerContainer: {
     marginTop: 10,
     marginBottom: 10,
@@ -42,19 +50,24 @@ export default StyleSheet.create({
     color: Colors.white
   },
   mapContainer: {
-    flex: 1,
     marginTop: Metrics.navBarHeight + Metrics.baseMargin,
     height: 200,
     width: Metrics.screenWidth - 20,
-    justifyContent: 'center',
     alignSelf: 'center',
     shadowColor: Colors.black,
     shadowOffset: {
-      height: 5,
-      width: 5
+      height: 7,
+      width: 7
     },
     shadowOpacity: 0.55,
-    shadowRadius: 2
+    shadowRadius: 2,
+    borderRadius: 5
+  },
+  map: {
+    height: 200,
+    width: Metrics.screenWidth - 20,
+    alignSelf: 'center',
+    borderRadius: 5
   },
   detailsContainer: {
     backgroundColor: Colors.charcoal,
@@ -63,14 +76,14 @@ export default StyleSheet.create({
     paddingBottom: 20,
     width: Metrics.screenWidth - 20,
     alignSelf: 'center',
-    borderRadius: 5,
     shadowColor: Colors.black,
     shadowOffset: {
       height: 7,
       width: 7
     },
     shadowOpacity: 0.55,
-    shadowRadius: 2
+    shadowRadius: 2,
+    borderRadius: 5
   },
   line: {
     alignSelf: 'center',

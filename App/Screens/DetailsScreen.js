@@ -17,8 +17,10 @@ export default class DetailsScreen extends React.Component {
     return (
       <View style={styles.background}>
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
+        <View style={styles.overlay}/>
         <ScrollView>
-            <MapView style={styles.mapContainer}
+          <View style={styles.mapContainer}>
+            <MapView style={styles.map}
               scrollEnabled = {false}
               region = {{
                 latitude: 29.95,
@@ -30,6 +32,7 @@ export default class DetailsScreen extends React.Component {
                 {latitude: 29.95, longitude: -90.1}
               ]}
             />
+          </View>
 
           <View style={styles.detailsContainer}>
             <View style={styles.headerContainer}>
