@@ -1,6 +1,6 @@
 'use strict'
 
-import React, { View, Text, Image, TouchableHighlight } from 'react-native'
+import React, { View, Text, Image, } from 'react-native'
 import Images from '../Themes'
 import { Routes } from '../Navigation/'
 // import _ from 'lodash'
