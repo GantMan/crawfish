@@ -9,7 +9,8 @@
         },
       "distance": "2.12 mi",
       "picture": "http://eattheinvaders.org/wp-content/uploads/2013/09/How_To_Eat_crawfish.jpg",
-      "address": "4713 Hastings St. • Metairie",
+      "address": "4713 Hastings St.",
+      "city": "Metairie",
       "rating_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
       "latitude": "",
       "longitude": ""
@@ -20,9 +21,10 @@
         "boiled": "$3.55",
         "live": "$3.00"
         },
-      "distance": "2.21 mi",
+      "distance": "2.50 mi",
       "picture": "http://www.toursbyisabelle.com/uploads/images/crawfish,P20boil.JPG.pagespeed.ce.yjGJDSC3TE.jpg",
-      "address": "4713 Hastings St. • New Orleans",
+      "address": "4713 Hastings St.",
+      "city": "New Orleans",
       "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
       "favorite": "true"
     },
@@ -34,7 +36,8 @@
         },
       "distance": "1.44 mi",
       "picture": "http://www.bestofvegas.com/cdn/Restaurants/Buzios_Seafood_Restaurant/images/Buzios-Seafood-Restaurant-las-vegas-kitchen.JPG",
-      "address": "4713 Hastings St. • Metairie",
+      "address": "4713 Hastings St.",
+      "city": "Metairie",
       "rating_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
       "favorite": "true"
     },
@@ -57,7 +60,8 @@
         },
       "distance": "5.11 mi",
       "picture": "http://media-cdn.tripadvisor.com/media/photo-s/01/b5/97/91/the-seafood-restaurant.jpg",
-      "address": "4713 Hastings St. • Metairie",
+      "address": "4713 Hastings St.",
+      "city": "New Orleans",
       "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png"
     },
     {
@@ -68,7 +72,8 @@
         },
       "distance": "0.64 mi",
       "picture": "http://www.greatnewplaces.com/images/Culinary/img16197_08112014115521.jpeg",
-      "address": "4713 Hastings St. • New Orleans",
+      "address": "4713 Hastings St.",
+      "city": "New Orleans",
       "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png"
     },
     {
@@ -79,7 +84,8 @@
         },
       "distance": "1.12 mi",
       "picture": "http://news.uniquepakistan.com.pk/wp-content/uploads/2014/08/1135-550x300.jpg",
-      "address": "4713 Hastings St. • Metairie",
+      "address": "4713 Hastings St.",
+      "city": "Metairie",
       "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png"
     }
   ]
