@@ -1,10 +1,11 @@
 'use strict'
 
-import React, { ScrollView, ListView, TouchableOpacity, Image, View } from 'react-native'
+import React, { ScrollView, ListView, TouchableOpacity, Image, View, Text } from 'react-native'
 import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
+import {Icon} from 'react-native-icons'
 
 export default class VenuesListScreen extends React.Component {
 
@@ -20,6 +21,27 @@ export default class VenuesListScreen extends React.Component {
     navigator: React.PropTypes.object,
     dispatch: React.PropTypes.func,
     venueList: React.PropTypes.array
+  }
+
+  componentDidMount () {
+    this.props.navigator.setState({
+      rightButton: this.searchButton()
+    })
+  }
+
+  searchButton () {
+    return (
+      <TouchableOpacity>
+        <View style={styles.searchButton}>
+          <Icon
+            name={'fontawesome|search'}
+            size={17}
+            color={'white'}
+            style={{width: 20, height: 20}}
+          />
+        </View>
+      </TouchableOpacity>
+    )
   }
 
   cellPress (rowData) {
