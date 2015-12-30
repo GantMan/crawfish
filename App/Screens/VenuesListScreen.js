@@ -1,6 +1,6 @@
 'use strict'
 
-import React, { ScrollView, ListView, TouchableOpacity, Image, View, Text } from 'react-native'
+import React, { ScrollView, ListView, TouchableOpacity, Image, View, Text, Modal } from 'react-native'
 import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
@@ -13,7 +13,8 @@ export default class VenuesListScreen extends React.Component {
     super(props)
     let ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
     this.state = {
-      dataSource: ds
+      dataSource: ds,
+      showModal: false
     }
   }
 
@@ -31,7 +32,7 @@ export default class VenuesListScreen extends React.Component {
 
   searchButton () {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => this.setState({showModal: true})}>
         <View style={styles.searchButton}>
           <Icon
             name={'fontawesome|search'}
@@ -64,11 +65,33 @@ export default class VenuesListScreen extends React.Component {
       </TouchableOpacity>
     )
   }
+
+  // TODO Move this to its own component
+  renderModalSearch () {
+    return (
+      <Modal
+        animated
+        transparent
+        visible={this.state.showModal}
+      >
+        <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center'}}>
+          <View style={{backgroundColor: '#444', padding: 10, margin: 20, borderRadius: 5}}>
+            <Text style={{color: 'white'}}>Search View Yo</Text>
+            <Text style={{color: 'white'}}>This is where you'd make search stuff</Text>
+            <TouchableOpacity onPress={() => this.setState({showModal: false})}>
+              <Text style={{color: 'white', backgroundColor: '#000', width: 100}}>CLOZE ME</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+    )
+  }
+
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
     return (
       <View style={styles.background}>
-
+        { this.renderModalSearch() }
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
         <View style={styles.overlay}/>
         <ScrollView>
