@@ -29,6 +29,13 @@ export default StyleSheet.create({
     borderRightColor: 'transparent',
     borderTopColor: Colors.darkRed
   },
+  icon: {
+    flex: 1,
+    position: 'absolute',
+    backgroundColor: 'clear',
+    bottom: 27,
+    left: 10
+  },
   favStarSelected: {
     flex: 1,
     position: 'absolute',

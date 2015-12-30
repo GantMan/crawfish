@@ -3,6 +3,7 @@
 import React, { View, Text, Image, TouchableOpacity } from 'react-native'
 import Images from '../Themes'
 import { Routes } from '../Navigation/'
+import {Icon} from 'react-native-icons'
 // import _ from 'lodash'
 
 import styles from '../Styles/VenueCellStyle'
@@ -59,7 +60,14 @@ export default class VenueCell extends React.Component {
               style={styles.starButton}
               onPress={this.makeFavorite.bind(this, this.props.title)}
               >
-              <Text style={styles.favStarSelected}>X</Text>
+              <View style={styles.icon}>
+                <Icon
+                  name={'fontawesome|star'}
+                  size={22}
+                  color={'white'}
+                  style={{width: 20, height: 20, marginTop: 0, marginLeft: 0}}
+                />
+              </View>
             </TouchableOpacity>
           </View>
         </View>
@@ -86,7 +94,14 @@ export default class VenueCell extends React.Component {
               style={styles.starButton}
               onPress={this.makeFavorite.bind(this, this.props.title)}
               >
-              <Text style={styles.favStarUnselected}>X</Text>
+              <View style={styles.icon}>
+                <Icon
+                  name={'fontawesome|star-o'}
+                  size={22}
+                  color={'white'}
+                  style={{width: 20, height: 20, marginTop: 0, marginLeft: 0}}
+                />
+              </View>
             </TouchableOpacity>
           </View>
         </View>
