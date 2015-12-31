@@ -38,10 +38,12 @@ export default class VenuesListScreen extends React.Component {
         <VenueCell
         imageUri={rowData.picture}
         title={rowData.name}
-        subtitle={rowData.address}
+        address={rowData.address}
+        city={rowData.city}
         distance={rowData.distance}
         priceBoiled={rowData.crawfish.boiled}
         ratingUrl={rowData.rating_url}
+        favorite={rowData.favorite}
         />
       </TouchableOpacity>
     )

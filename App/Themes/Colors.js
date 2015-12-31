@@ -15,7 +15,8 @@ const colors = {
   lightGreen: '#4ac24a',
   orange: '#fc9f35',
   lightYellow: '#e6da75',
-  fuckingYellow: '#fffb21'
+  fuckingYellow: '#fffb21',
+  darkRed: '#5d1717'
 }
 
 export default colors
