@@ -73,7 +73,7 @@ export default class VenuesListScreen extends React.Component {
                 paddingTop={7}
                 paddingBottom={7}
                 separatorWidth={1}
-                direction={'column'}
+                direction={'row'}
                 // renderOption={(option, selected) => {
                 //   return (
                 //     <View style={styles.segmentTextContainer}>
