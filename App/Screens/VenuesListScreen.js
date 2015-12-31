@@ -1,10 +1,11 @@
 'use strict'
 
-import React, { ScrollView, ListView, TouchableOpacity, Image, View } from 'react-native'
+import React, { ScrollView, ListView, TouchableOpacity, Image, View, Text } from 'react-native'
 import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
+import { SegmentedControls } from 'react-native-radio-buttons'
 
 export default class VenuesListScreen extends React.Component {
 
@@ -19,11 +20,16 @@ export default class VenuesListScreen extends React.Component {
   static propTypes = {
     navigator: React.PropTypes.object,
     dispatch: React.PropTypes.func,
-    venueList: React.PropTypes.array
+    venueList: React.PropTypes.array,
+    options: React.PropTypes.array
   }
 
   cellPress (rowData) {
     this.props.navigator.push(Routes.DetailsScreen)
+  }
+
+  setSelectedOption (selectedOption) {
+    window.alert(`You selected ${selectedOption}`)
   }
 
   customRowRender (rowData) {
@@ -40,6 +46,7 @@ export default class VenuesListScreen extends React.Component {
       </TouchableOpacity>
     )
   }
+
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
     return (
@@ -48,6 +55,25 @@ export default class VenuesListScreen extends React.Component {
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
         <View style={styles.overlay}/>
         <ScrollView>
+          <View style={styles.segmentContainer}>
+            <SegmentedControls
+                options={ ['List', 'Map'] }
+                allowFontScaling={false}
+                onSelection={ this.setSelectedOption.bind(this) }
+                selectedOption={ 'List' }
+                ref='segment'
+                tint= {'white'}
+                selectedTint= {'white'}
+                backTint= {'#383a3d'}
+                renderOption={(option, selected) => {
+                  return (
+                    <View style={styles.segmentTextContainer}>
+                      <Text style={styles.segment}>{option}</Text>
+                    </View>
+                  )
+                }}
+              />
+          </View>
           <ListView
             style={styles.listy}
             dataSource={this.state.dataSource.cloneWithRows(this.props.venueList)}

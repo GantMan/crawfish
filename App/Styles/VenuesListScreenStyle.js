@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Metrics, Colors } from '../Themes/'
+import { Metrics, Colors, Fonts } from '../Themes/'
 
 export default StyleSheet.create({
   texty: {
@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   listy: {
     marginBottom: 20,
-    marginTop: Metrics.navBarHeight + Metrics.baseMargin
+    marginTop: Metrics.navBarHeight + Metrics.baseMargin * 3
   },
   backgroundImage: {
     flex: 1,
@@ -27,5 +27,22 @@ export default StyleSheet.create({
     right: 0,
     position: 'absolute',
     backgroundColor: Colors.transWhite
+  },
+  segmentContainer: {
+    top: 80,
+    width: Metrics.screenWidth - 20,
+    alignSelf: 'center',
+    fontSize: 18
+  },
+  segmentTextContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 30
+  },
+  segment: {
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: Fonts.base,
+    paddingBottom: 4
   }
 })
