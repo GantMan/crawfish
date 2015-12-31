@@ -29,7 +29,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.transWhite
   },
   searchButton: {
-    backgroundColor: Colors.softLight,
     marginRight: 10,
     marginTop: 7,
     padding: 3,

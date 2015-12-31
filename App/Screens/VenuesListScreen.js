@@ -38,7 +38,7 @@ export default class VenuesListScreen extends React.Component {
             name={'fontawesome|search'}
             size={17}
             color={'white'}
-            style={{width: 20, height: 20}}
+            style={{width: 20, height: 20, backgroundColor: '#383a3d'}}
           />
         </View>
       </TouchableOpacity>
