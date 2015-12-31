@@ -74,12 +74,12 @@ export default class VenuesListScreen extends React.Component {
         transparent
         visible={this.state.showModal}
       >
-        <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center'}}>
-          <View style={{backgroundColor: '#444', padding: 10, margin: 20, borderRadius: 5}}>
+        <View style={{top: 64, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center'}}>
+          <View style={{height: 150, backgroundColor: '#383a3d', padding: 10, margin: 20, borderRadius: 5, flex: 1}}>
             <Text style={{color: 'white'}}>Search View Yo</Text>
             <Text style={{color: 'white'}}>This is where you'd make search stuff</Text>
-            <TouchableOpacity onPress={() => this.setState({showModal: false})}>
-              <Text style={{color: 'white', backgroundColor: '#000', width: 100}}>CLOZE ME</Text>
+            <TouchableOpacity style={{height: 30, backgroundColor: '#000', borderRadius: 5, justifyContent: 'center'}} onPress={() => this.setState({showModal: false})}>
+              <Text style={{color: 'white', width: 100, textAlign: 'center', alignSelf: 'center'}}>SEARCH</Text>
             </TouchableOpacity>
           </View>
         </View>
