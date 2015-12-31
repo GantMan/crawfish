@@ -64,16 +64,23 @@ export default class VenuesListScreen extends React.Component {
                 onSelection={ this.setSelectedOption.bind(this) }
                 selectedOption={ 'List' }
                 ref='segment'
+                containerBorderTint={'#383a3d'}
+                backTint= {'#383a3d'}
                 tint= {'white'}
                 selectedTint= {'white'}
-                backTint= {'#383a3d'}
-                renderOption={(option, selected) => {
-                  return (
-                    <View style={styles.segmentTextContainer}>
-                      <Text style={styles.segment}>{option}</Text>
-                    </View>
-                  )
-                }}
+                selectedBackgroundColor={'#5d1717'}
+                separatorTint={'black'}
+                paddingTop={7}
+                paddingBottom={7}
+                separatorWidth={1}
+                direction={'column'}
+                // renderOption={(option, selected) => {
+                //   return (
+                //     <View style={styles.segmentTextContainer}>
+                //       <Text style={styles.segment}>{option}</Text>
+                //     </View>
+                //   )
+                // }}
               />
           </View>
           <ListView
