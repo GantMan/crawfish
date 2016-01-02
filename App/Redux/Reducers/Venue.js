@@ -1,10 +1,11 @@
 'use strict'
 
-import { VenueActions } from '../Actions/Venue'
+import { VenueActions } from '../Actions/VenueActions'
 
 // User shape
 const INITIAL_STATE = {
   venueList: require('../../Fixtures/venues.json').venues,
+  selectedVenue: null,
   fetching: false
 }
 
@@ -19,6 +20,11 @@ export function reducer (state = INITIAL_STATE, action) {
       return {
         ...state,
         fetching: true
+      }
+    case VenueActions.SELECT_VENUE:
+      return {
+        ...state,
+        selectedVenue: action.venue
       }
     default:
       return state

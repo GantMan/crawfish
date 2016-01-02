@@ -2,15 +2,32 @@
 
 import React, { ScrollView, View, MapView, TouchableHighlight, Image, Text, TextInput } from 'react-native'
 // import { Routes } from '../Navigation/'
+import _ from 'lodash'
+import {connect} from 'react-redux/native'
 import styles from '../Styles/DetailsScreenStyle'
 
-export default class DetailsScreen extends React.Component {
+class DetailsScreen extends React.Component {
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      currentVenue: {}
+    }
+  }
 
   static propTypes = {
     navigator: React.PropTypes.object,
     dispatch: React.PropTypes.func,
     latitude: React.PropTypes.string,
-    longitude: React.PropTypes.string
+    longitude: React.PropTypes.string,
+    selectedVenue: React.PropTypes.string,
+    venueList: React.PropTypes.array
+  }
+
+  componentWillMount () {
+    let currentVenueIndex = _.findIndex(this.props.venueList, 'name', this.props.selectedVenue)
+    console.log(currentVenueIndex, 'index')
+    this.setState({currentVenue: this.props.venueList[currentVenueIndex]})
   }
 
   render () {
@@ -36,7 +53,7 @@ export default class DetailsScreen extends React.Component {
 
           <View style={styles.detailsContainer}>
             <View style={styles.headerContainer}>
-              <Text allowFontScaling={false} style={styles.header}>DETAILS</Text>
+              <Text allowFontScaling={false} style={styles.header}>{this.state.currentVenue.name}</Text>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
@@ -76,16 +93,11 @@ export default class DetailsScreen extends React.Component {
   }
 }
 
-// function mapStateToProps (state) {
-//   if (state.cases.subjectList === undefined) {
-//     return {
-//       caseId: state.cases.currentCaseId
-//     }
-//   }
-//   return {
-//     caseId: state.cases.currentCaseId,
-//     subjectList: state.cases.subjectList
-//   }
-// }
+function mapStateToProps (state) {
+  return {
+    selectedVenue: state.venue.selectedVenue,
+    venueList: state.venue.venueList
+  }
+}
 
-// export default connect(mapStateToProps)(SubjectsScreen)
+export default connect(mapStateToProps)(DetailsScreen)
