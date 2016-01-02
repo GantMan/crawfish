@@ -1,0 +1,8 @@
+'use strict'
+
+export const VenueActions = {
+  REQUEST_VENUES: 'REQUEST_VENUES',
+  VENUES_SUCCESS: 'VENUES_SUCCESS',
+  VENUES_FAILURE: 'VENUES_FAILURE'
+}
+
