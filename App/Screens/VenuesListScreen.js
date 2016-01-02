@@ -5,6 +5,7 @@ import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
+import * as actions from '../Redux/Actions/ActionCreators'
 
 export default class VenuesListScreen extends React.Component {
 
@@ -23,6 +24,7 @@ export default class VenuesListScreen extends React.Component {
   }
 
   cellPress (rowData) {
+    this.props.dispatch(actions.setVenue(rowData.name))
     this.props.navigator.push(Routes.DetailsScreen)
   }
 
