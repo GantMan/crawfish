@@ -26,7 +26,6 @@ class DetailsScreen extends React.Component {
 
   componentWillMount () {
     let currentVenueIndex = _.findIndex(this.props.venueList, 'name', this.props.selectedVenue)
-    console.log(currentVenueIndex, 'index')
     this.setState({currentVenue: this.props.venueList[currentVenueIndex]})
   }
 
