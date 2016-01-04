@@ -49,6 +49,11 @@ export default StyleSheet.create({
     fontFamily: Fonts.base,
     color: Colors.white
   },
+  dataContainer: {
+    flexDirection: 'column',
+    backgroundColor: 'red',
+    flex: 2
+  },
   mapContainer: {
     marginTop: Metrics.navBarHeight + Metrics.baseMargin,
     height: 200,

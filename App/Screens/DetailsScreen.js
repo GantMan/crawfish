@@ -29,6 +29,14 @@ class DetailsScreen extends React.Component {
     this.setState({currentVenue: this.props.venueList[currentVenueIndex]})
   }
 
+  handleClosed (closed) {
+    if (closed === 'true') {
+      return ('No')
+    } else if (closed === 'false') {
+      return ('Yes')
+    }
+  }
+
   render () {
     return (
       <View style={styles.background}>
@@ -56,15 +64,20 @@ class DetailsScreen extends React.Component {
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+              <View style={styles.dataContainer}>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.address}</Text>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.city}</Text>
+              </View>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Phone</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+              <View style={styles.dataContainer}>
+                <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+              </View>
             </View>
             <View style={styles.labelContainer}>
-              <Text allowFontScaling={false} style={styles.boldLabel}>Hours</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+              <Text allowFontScaling={false} style={styles.boldLabel}>Open</Text>
+              <Text allowFontScaling={false} style={styles.dataLabel}>{this.handleClosed(this.state.currentVenue.is_closed)}</Text>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Rating</Text>

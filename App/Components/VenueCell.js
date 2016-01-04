@@ -17,7 +17,7 @@ export default class VenueCell extends React.Component {
   }
 
   renderIcon () {
-    if (this.props.favorite) {
+    if (this.props.favorite === 'true') {
       return (
         <Icon
           name={'fontawesome|star'}

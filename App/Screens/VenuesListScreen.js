@@ -39,6 +39,7 @@ class VenuesListScreen extends React.Component {
         priceBoiled={rowData.crawfish.boiled}
         ratingUrl={rowData.rating_url}
         favorite={rowData.favorite}
+        isClosed={rowData.is_closed}
         />
       </TouchableOpacity>
     )
