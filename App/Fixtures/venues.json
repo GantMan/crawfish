@@ -13,7 +13,9 @@
       "city": "Metairie",
       "rating_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
       "latitude": "",
-      "longitude": ""
+      "longitude": "",
+      "favorite": "false",
+      "is_closed": "false"
     },
     {
       "name": "Deanie's Seafood",
@@ -26,7 +28,10 @@
       "address": "4713 Hastings St.",
       "city": "New Orleans",
       "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
-      "favorite": "true"
+      "latitude": "",
+      "longitude": "",
+      "favorite": "true",
+      "is_closed": "false"
     },
     {
       "name": "Don's Seafood",
@@ -39,7 +44,10 @@
       "address": "4713 Hastings St.",
       "city": "Metairie",
       "rating_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
-      "favorite": "true"
+      "latitude": "",
+      "longitude": "",
+      "favorite": "true",
+      "is_closed": "false"
     },
     {
       "name": "Landry's Seafood",
@@ -50,7 +58,11 @@
       "distance": "9.1 mi",
       "picture": "http://www.westvegas.com/restaurants/LANDRYS_SEAFOOD_RESTAURANT_.jpg",
       "address": "4713 Hastings St. • New Orleans",
-      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png"
+      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "latitude": "",
+      "longitude": "",
+      "favorite": "false",
+      "is_closed": "true"
     },
     {
       "name": "Deanie's Seafood",
@@ -62,7 +74,11 @@
       "picture": "http://media-cdn.tripadvisor.com/media/photo-s/01/b5/97/91/the-seafood-restaurant.jpg",
       "address": "4713 Hastings St.",
       "city": "New Orleans",
-      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png"
+      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "latitude": "",
+      "longitude": "",
+      "favorite": "false",
+      "is_closed": "false"
     },
     {
       "name": "Soylent Green",
@@ -74,7 +90,11 @@
       "picture": "http://www.greatnewplaces.com/images/Culinary/img16197_08112014115521.jpeg",
       "address": "4713 Hastings St.",
       "city": "New Orleans",
-      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png"
+      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+      "latitude": "",
+      "longitude": "",
+      "favorite": "false",
+      "is_closed": "false"
     },
     {
       "name": "Iris",
@@ -86,7 +106,11 @@
       "picture": "http://news.uniquepakistan.com.pk/wp-content/uploads/2014/08/1135-550x300.jpg",
       "address": "4713 Hastings St.",
       "city": "Metairie",
-      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png"
+      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+      "latitude": "",
+      "longitude": "",
+      "favorite": "false",
+      "is_closed": "false"
     }
   ]
 }
