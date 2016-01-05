@@ -9,7 +9,6 @@ export default StyleSheet.create({
     flexDirection: 'row',
     marginBottom: 10,
     marginHorizontal: 10,
-    width: Metrics.screenWidth - 20,
     shadowColor: Colors.black,
     shadowOffset: {
       height: 7,
@@ -42,7 +41,6 @@ export default StyleSheet.create({
   },
   myImage: {
     flex: 8,
-    width: Metrics.screenWidth - 20,
     height: 100,
     alignSelf: 'center',
     justifyContent: 'center'
@@ -71,14 +69,13 @@ export default StyleSheet.create({
     width: 70
   },
   overlayContainer: {
-    flex: 10,
     flexDirection: 'row',
     backgroundColor: Colors.transBlack,
     height: 40,
     bottom: 0,
     left: 0,
+    right: 0,
     position: 'absolute',
-    width: Metrics.screenWidth - 20,
     justifyContent: 'space-between',
     alignItems: 'center'
   },
