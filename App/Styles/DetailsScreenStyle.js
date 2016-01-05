@@ -88,7 +88,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.transBlack,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1.5,
     borderColor: Colors.transWhite
   },
   callButton: {
@@ -96,7 +95,7 @@ export default StyleSheet.create({
     backgroundColor: Colors.transBlack,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1.5,
+    borderLeftWidth: 2,
     borderColor: Colors.transWhite
   },
   mapButtonsLabel: {

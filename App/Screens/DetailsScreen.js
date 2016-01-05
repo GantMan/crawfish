@@ -74,7 +74,7 @@ class DetailsScreen extends React.Component {
                     color={'white'}
                     style={{width: 20, height: 20, marginTop: 0, marginLeft: 0}}
                   />
-                  <Text style={styles.mapButtonsLabel}>Directions</Text>
+                  <Text allowFontScaling={false} style={styles.mapButtonsLabel}>Directions</Text>
                 </View>
               </TouchableHighlight>
               <TouchableHighlight
@@ -89,7 +89,7 @@ class DetailsScreen extends React.Component {
                     color={'white'}
                     style={{width: 20, height: 20, marginTop: 0, marginLeft: 0}}
                   />
-                  <Text style={styles.mapButtonsLabel}>Call</Text>
+                  <Text allowFontScaling={false} style={styles.mapButtonsLabel}>Call</Text>
                 </View>
               </TouchableHighlight>
             </View>
@@ -97,7 +97,7 @@ class DetailsScreen extends React.Component {
 
           <View style={styles.detailsContainer}>
             <View style={styles.headerContainer}>
-              <Text allowFontScaling={false} style={styles.header}>DETAILS</Text>
+              <Text allowFontScaling={false} style={styles.header}>Info</Text>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Name</Text>
