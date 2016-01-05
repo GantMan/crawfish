@@ -25,8 +25,8 @@ export default StyleSheet.create({
   headerContainer: {
     marginTop: 10,
     marginBottom: 10,
-    borderBottomWidth: 0.5,
-    borderColor: Colors.white,
+    // borderBottomWidth: 1.5,
+    // borderColor: Colors.white,
     width: Metrics.screenWidth - 40,
     alignSelf: 'center'
   },

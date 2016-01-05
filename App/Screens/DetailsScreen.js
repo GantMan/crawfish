@@ -6,6 +6,7 @@ import _ from 'lodash'
 import {connect} from 'react-redux/native'
 import {Icon} from 'react-native-icons'
 import styles from '../Styles/DetailsScreenStyle'
+import { Images } from '../Themes'
 
 class DetailsScreen extends React.Component {
 
@@ -98,6 +99,10 @@ class DetailsScreen extends React.Component {
           <View style={styles.detailsContainer}>
             <View style={styles.headerContainer}>
               <Text allowFontScaling={false} style={styles.header}>Info</Text>
+            </View>
+            <View style={{justifyContent: 'center'}}>
+              <View style={{height: 1.5, width: 350, backgroundColor: 'white', alignSelf: 'center'}}></View>
+              <Image style={{alignSelf: 'center', marginTop: -10}} source={Images.divider} />
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Name</Text>
