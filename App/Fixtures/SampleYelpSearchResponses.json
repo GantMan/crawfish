@@ -64,6 +64,52 @@ Response
         },
         {
             "is_claimed": false,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/dennisseafood-metairie?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 5,
+            "name": "Dennis' Seafood",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/dennisseafood-metairie?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+            "categories": [
+                [
+                    "Seafood Markets",
+                    "seafoodmarkets"
+                ]
+            ],
+            "phone": "5048852209",
+            "snippet_text": "My favorite seafood place! Whether it is prepared foods or raw, I LOVE Dennis's seafood! I always get fish fillets, stuffed artichokes, shrimp salad, and a...",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/DG88942Y6_R-xBnuUffmkg/ms.jpg",
+            "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/INzX_t8-9QRBpMimCF87lA/ms.jpg",
+            "display_phone": "+1-504-885-2209",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "dennisseafood-metairie",
+            "is_closed": false,
+            "location": {
+                "city": "Metairie",
+                "display_address": [
+                    "4428 Lorino St",
+                    "Metairie",
+                    "Metairie, LA 70006"
+                ],
+                "geo_accuracy": 8.0,
+                "neighborhoods": [
+                    "Metairie"
+                ],
+                "postal_code": "70006",
+                "country_code": "US",
+                "address": [
+                    "4428 Lorino St"
+                ],
+                "coordinate": {
+                    "latitude": 30.01752,
+                    "longitude": -90.1876
+                },
+                "state_code": "LA"
+            }
+        },
+        {
+            "is_claimed": false,
             "rating": 4.0,
             "mobile_url": "http://m.yelp.com/biz/dragos-seafood-restaurant-metairie?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
             "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",

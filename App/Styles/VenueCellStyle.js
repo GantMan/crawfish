@@ -1,7 +1,7 @@
 'use strict'
 
 import { StyleSheet } from 'react-native'
-import { Fonts, Colors, Metrics } from '../Themes/'
+import { Fonts, Colors } from '../Themes/'
 
 export default StyleSheet.create({
   container: {
@@ -57,7 +57,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  priceBoiled: {
+  crawfishBoiled: {
     color: Colors.lightGreen,
     paddingTop: 11.25,
     fontSize: 20,
