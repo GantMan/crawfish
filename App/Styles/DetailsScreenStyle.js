@@ -32,7 +32,7 @@ export default StyleSheet.create({
   },
   header: {
     alignSelf: 'center',
-    fontSize: Metrics.fonts.normal,
+    fontSize: 22,
     fontFamily: Fonts.emphasis,
     color: Colors.white,
     paddingBottom: 5

@@ -64,7 +64,13 @@ class DetailsScreen extends React.Component {
 
           <View style={styles.detailsContainer}>
             <View style={styles.headerContainer}>
-              <Text allowFontScaling={false} style={styles.header}>{this.state.currentVenue.name}</Text>
+              <Text allowFontScaling={false} style={styles.header}>DETAILS</Text>
+            </View>
+            <View style={styles.labelContainer}>
+              <Text allowFontScaling={false} style={styles.boldLabel}>Name</Text>
+              <View style={styles.dataContainer}>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.name}</Text>
+              </View>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
