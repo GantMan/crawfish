@@ -51,13 +51,13 @@ class DetailsScreen extends React.Component {
             <MapView style={styles.map}
               scrollEnabled = {false}
               region = {{
-                latitude: 29.95,
+                latitude: 29.96,
                 longitude: -90.1,
-                latitudeDelta: 0.15,
-                longitudeDelta: 0.15
+                latitudeDelta: 0.20,
+                longitudeDelta: 0.20
               }}
               annotations={[
-                {latitude: 29.95, longitude: -90.1}
+                {latitude: `${this.state.currentVenue.latitude}`, longitude: `${this.state.currentVenue.longitude}`}
               ]}
             />
           </View>
