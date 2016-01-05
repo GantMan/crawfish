@@ -26,7 +26,11 @@ class DetailsScreen extends React.Component {
 
   componentWillMount () {
     let currentVenueIndex = _.findIndex(this.props.venueList, 'name', this.props.selectedVenue)
-    this.setState({currentVenue: this.props.venueList[currentVenueIndex]})
+    this.setState({ currentVenue: this.props.venueList[currentVenueIndex] || this.props.venueList[0] })
+  }
+
+  submitButton () {
+    window.alert('Submitting')
   }
 
   handleClosed (closed) {
@@ -66,22 +70,27 @@ class DetailsScreen extends React.Component {
               <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
               <View style={styles.dataContainer}>
                 <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.address}</Text>
-                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.city}</Text>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.city}, LA </Text>
               </View>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Phone</Text>
               <View style={styles.dataContainer}>
-                <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.phone}</Text>
               </View>
             </View>
             <View style={styles.labelContainer}>
-              <Text allowFontScaling={false} style={styles.boldLabel}>Open</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>{this.handleClosed(this.state.currentVenue.is_closed)}</Text>
+              <Text allowFontScaling={false} style={styles.boldLabel}>Hours</Text>
+              <View style={styles.dataContainer}>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.hours}</Text>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.closed}</Text>
+              </View>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Rating</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>* * * *</Text>
+              <View style={{flex: 2, justifyContent: 'center'}}>
+                <Image style={{width: 100, height: 20, alignSelf: 'flex-start'}} resizeMode='contain' source={{uri: this.state.currentVenue.rating_url}}/>
+              </View>
             </View>
 
             <View style={styles.line}/>
@@ -95,6 +104,7 @@ class DetailsScreen extends React.Component {
             <TouchableHighlight
               style={styles.submitButton}
               underlayColor='red'
+              onPress={this.submitButton.bind(this)}
             >
               <Text allowFontScaling={false} style={{color: 'white', fontSize: 16}}>Submit</Text>
             </TouchableHighlight>

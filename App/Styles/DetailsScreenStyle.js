@@ -51,7 +51,6 @@ export default StyleSheet.create({
   },
   dataContainer: {
     flexDirection: 'column',
-    backgroundColor: 'red',
     flex: 2
   },
   mapContainer: {
@@ -102,7 +101,8 @@ export default StyleSheet.create({
     width: Metrics.screenWidth - 20
   },
   labelContainer: {
-    alignItems: 'center',
+    flex: 3,
+    alignItems: 'flex-start',
     paddingBottom: 5,
     paddingHorizontal: 15,
     paddingVertical: 10,
