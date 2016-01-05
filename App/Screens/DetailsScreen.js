@@ -76,7 +76,7 @@ class DetailsScreen extends React.Component {
               <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
               <View style={styles.dataContainer}>
                 <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.address}</Text>
-                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.city}, LA </Text>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.city}, {this.state.currentVenue.state} {this.state.currentVenue.zip}</Text>
               </View>
             </View>
             <View style={styles.labelContainer}>
