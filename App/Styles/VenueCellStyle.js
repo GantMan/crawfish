@@ -48,7 +48,6 @@ export default StyleSheet.create({
   backgroundContainer: {
     flex: 10,
     flexDirection: 'row',
-    backgroundColor: Colors.transDark,
     justifyContent: 'center'
   },
   detailsContainer: {
