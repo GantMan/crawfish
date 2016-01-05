@@ -2,11 +2,7 @@
   "venues": [
     {
       "name": "Bevi Seafood",
-      "oysters": "",
-      "crawfish": {
-        "boiled": "$3.50",
-        "live": "$3.00"
-        },
+      "phone": "5048871234",
       "distance": "2.12 mi",
       "picture": "http://eattheinvaders.org/wp-content/uploads/2013/09/How_To_Eat_crawfish.jpg",
       "address": "4713 Hastings St.",
@@ -15,14 +11,14 @@
       "latitude": "",
       "longitude": "",
       "favorite": "false",
-      "is_closed": "false"
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$3.50",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Deanie's Seafood",
-      "crawfish": {
-        "boiled": "$3.55",
-        "live": "$3.00"
-        },
+      "phone": "5048871234",
       "distance": "2.50 mi",
       "picture": "http://www.toursbyisabelle.com/uploads/images/crawfish,P20boil.JPG.pagespeed.ce.yjGJDSC3TE.jpg",
       "address": "4713 Hastings St.",
@@ -31,14 +27,14 @@
       "latitude": "",
       "longitude": "",
       "favorite": "true",
-      "is_closed": "false"
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$3.60",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Don's Seafood",
-      "crawfish": {
-        "boiled": "$3.75",
-        "live": "$3.00"
-        },
+      "phone": "5048871234",
       "distance": "1.44 mi",
       "picture": "http://www.bestofvegas.com/cdn/Restaurants/Buzios_Seafood_Restaurant/images/Buzios-Seafood-Restaurant-las-vegas-kitchen.JPG",
       "address": "4713 Hastings St.",
@@ -47,14 +43,14 @@
       "latitude": "",
       "longitude": "",
       "favorite": "true",
-      "is_closed": "false"
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$3.75",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Landry's Seafood",
-      "crawfish": {
-        "boiled": "$4.00",
-        "live": "$3.00"
-        },
+      "phone": "5048871234",
       "distance": "9.1 mi",
       "picture": "http://www.westvegas.com/restaurants/LANDRYS_SEAFOOD_RESTAURANT_.jpg",
       "address": "4713 Hastings St. • New Orleans",
@@ -62,14 +58,14 @@
       "latitude": "",
       "longitude": "",
       "favorite": "false",
-      "is_closed": "true"
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$4.00",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Deanie's Seafood",
-      "crawfish": {
-        "boiled": "$4.10",
-        "live": "$3.00"
-        },
+      "phone": "5048871234",
       "distance": "5.11 mi",
       "picture": "http://media-cdn.tripadvisor.com/media/photo-s/01/b5/97/91/the-seafood-restaurant.jpg",
       "address": "4713 Hastings St.",
@@ -78,14 +74,14 @@
       "latitude": "",
       "longitude": "",
       "favorite": "false",
-      "is_closed": "false"
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$4.10",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Soylent Green",
-      "crawfish": {
-        "boiled": "$4.50",
-        "live": "$3.00"
-        },
+      "phone": "5048871234",
       "distance": "0.64 mi",
       "picture": "http://www.greatnewplaces.com/images/Culinary/img16197_08112014115521.jpeg",
       "address": "4713 Hastings St.",
@@ -94,14 +90,14 @@
       "latitude": "",
       "longitude": "",
       "favorite": "false",
-      "is_closed": "false"
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$4.50",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Iris",
-      "crawfish": {
-        "boiled": "$5.50",
-        "live": "$3.00"
-        },
+      "phone": "5048871234",
       "distance": "1.12 mi",
       "picture": "http://news.uniquepakistan.com.pk/wp-content/uploads/2014/08/1135-550x300.jpg",
       "address": "4713 Hastings St.",
@@ -110,7 +106,10 @@
       "latitude": "",
       "longitude": "",
       "favorite": "false",
-      "is_closed": "false"
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$5.50",
+      "crawifh_live": "$5.00"
     }
   ]
 }
