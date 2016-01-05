@@ -54,6 +54,7 @@ export default StyleSheet.create({
     flex: 2
   },
   mapContainer: {
+    flex: 1,
     marginTop: Metrics.navBarHeight + Metrics.baseMargin,
     height: 200,
     width: Metrics.screenWidth - 20,
@@ -72,6 +73,38 @@ export default StyleSheet.create({
     width: Metrics.screenWidth - 20,
     alignSelf: 'center',
     borderRadius: 5
+  },
+  mapButtonsContainer: {
+    flexDirection: 'row',
+    flex: 1,
+    width: Metrics.screenWidth - 20,
+    height: 45,
+    position: 'absolute',
+    left: 0,
+    bottom: 0
+  },
+  directionsButton: {
+    flex: 1,
+    backgroundColor: Colors.transBlack,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1.5,
+    borderColor: Colors.transWhite
+  },
+  callButton: {
+    flex: 1,
+    backgroundColor: Colors.transBlack,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1.5,
+    borderColor: Colors.transWhite
+  },
+  mapButtonsLabel: {
+    color: 'white',
+    fontSize: 18,
+    fontFamily: Fonts.bold,
+    textAlign: 'center',
+    marginLeft: 5
   },
   detailsContainer: {
     backgroundColor: Colors.charcoal,
