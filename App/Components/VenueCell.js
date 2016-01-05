@@ -64,7 +64,7 @@ export default class VenueCell extends React.Component {
 
         <View style={styles.overlayContainer}>
           <View style={styles.labelsContainer}>
-            <Text allowFontScaling={false} style={styles.title}>{this.props.title}</Text>
+            <Text allowFontScaling={false} numberOfLines={1} style={styles.title}>{this.props.title}</Text>
             <Text allowFontScaling={false} numberOfLines={0} style={styles.address}>{this.props.address} • {this.props.city}</Text>
           </View>
           <View style={styles.distanceContainer}>
