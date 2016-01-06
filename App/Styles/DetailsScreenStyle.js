@@ -27,11 +27,12 @@ export default StyleSheet.create({
     marginBottom: 10,
     // borderBottomWidth: 1.5,
     // borderColor: Colors.white,
-    width: Metrics.screenWidth - 40,
+    width: Metrics.screenWidth - 60,
     alignSelf: 'center'
   },
   header: {
     alignSelf: 'center',
+    textAlign: 'center',
     fontSize: 22,
     fontFamily: Fonts.emphasis,
     color: Colors.white,
@@ -158,5 +159,15 @@ export default StyleSheet.create({
     borderColor: Colors.white,
     borderRadius: 5,
     borderWidth: 1
+  },
+  separatorLine: {
+    height: 1.5,
+    width: Metrics.screenWidth - 40,
+    backgroundColor: 'white',
+    alignSelf: 'center'
+  },
+  divider: {
+    alignSelf: 'center',
+    marginTop: -10
   }
 })
