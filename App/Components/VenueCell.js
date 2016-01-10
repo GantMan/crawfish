@@ -48,7 +48,7 @@ export default class VenueCell extends React.Component {
     crawfishBoiled: React.PropTypes.string,
     pressDirections: React.PropTypes.func,
     navigator: React.PropTypes.object,
-    favorite: React.PropTypes.bool
+    favorite: React.PropTypes.string
   }
 
   render () {
