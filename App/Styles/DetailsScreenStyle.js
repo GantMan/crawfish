@@ -25,14 +25,15 @@ export default StyleSheet.create({
   headerContainer: {
     marginTop: 10,
     marginBottom: 10,
-    borderBottomWidth: 0.5,
-    borderColor: Colors.white,
-    width: Metrics.screenWidth - 40,
+    // borderBottomWidth: 1.5,
+    // borderColor: Colors.white,
+    width: Metrics.screenWidth - 60,
     alignSelf: 'center'
   },
   header: {
     alignSelf: 'center',
-    fontSize: Metrics.fonts.normal,
+    textAlign: 'center',
+    fontSize: 22,
     fontFamily: Fonts.emphasis,
     color: Colors.white,
     paddingBottom: 5
@@ -49,7 +50,12 @@ export default StyleSheet.create({
     fontFamily: Fonts.base,
     color: Colors.white
   },
+  dataContainer: {
+    flexDirection: 'column',
+    flex: 2
+  },
   mapContainer: {
+    flex: 1,
     marginTop: Metrics.navBarHeight + Metrics.baseMargin,
     height: 200,
     width: Metrics.screenWidth - 20,
@@ -68,6 +74,37 @@ export default StyleSheet.create({
     width: Metrics.screenWidth - 20,
     alignSelf: 'center',
     borderRadius: 5
+  },
+  mapButtonsContainer: {
+    flexDirection: 'row',
+    flex: 1,
+    width: Metrics.screenWidth - 20,
+    height: 45,
+    position: 'absolute',
+    left: 0,
+    bottom: 0
+  },
+  directionsButton: {
+    flex: 1,
+    backgroundColor: Colors.transBlack,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: Colors.transWhite
+  },
+  callButton: {
+    flex: 1,
+    backgroundColor: Colors.transBlack,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderLeftWidth: 2,
+    borderColor: Colors.transWhite
+  },
+  mapButtonsLabel: {
+    color: 'white',
+    fontSize: 18,
+    fontFamily: Fonts.bold,
+    textAlign: 'center',
+    marginLeft: 5
   },
   detailsContainer: {
     backgroundColor: Colors.charcoal,
@@ -97,7 +134,8 @@ export default StyleSheet.create({
     width: Metrics.screenWidth - 20
   },
   labelContainer: {
-    alignItems: 'center',
+    flex: 3,
+    alignItems: 'flex-start',
     paddingBottom: 5,
     paddingHorizontal: 15,
     paddingVertical: 10,
@@ -121,5 +159,15 @@ export default StyleSheet.create({
     borderColor: Colors.white,
     borderRadius: 5,
     borderWidth: 1
+  },
+  separatorLine: {
+    height: 1.5,
+    width: Metrics.screenWidth - 40,
+    backgroundColor: 'white',
+    alignSelf: 'center'
+  },
+  divider: {
+    alignSelf: 'center',
+    marginTop: -10
   }
 })

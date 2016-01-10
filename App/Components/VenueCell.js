@@ -17,7 +17,7 @@ export default class VenueCell extends React.Component {
   }
 
   renderIcon () {
-    if (this.props.favorite) {
+    if (this.props.favorite === 'true') {
       return (
         <Icon
           name={'fontawesome|star'}
@@ -45,7 +45,7 @@ export default class VenueCell extends React.Component {
     address: React.PropTypes.string,
     city: React.PropTypes.string,
     distance: React.PropTypes.string,
-    priceBoiled: React.PropTypes.string,
+    crawfishBoiled: React.PropTypes.string,
     pressDirections: React.PropTypes.func,
     navigator: React.PropTypes.object,
     favorite: React.PropTypes.bool
@@ -57,14 +57,14 @@ export default class VenueCell extends React.Component {
         <View style={styles.backgroundContainer}>
           <Image style={styles.myImage} source={{uri: this.props.imageUri}} defaultSource={Images.logo}/>
           <View style={styles.detailsContainer}>
-            <Text allowFontScaling={false} style={styles.priceBoiled}>{this.props.priceBoiled}</Text>
+            <Text allowFontScaling={false} style={styles.crawfishBoiled}>{this.props.crawfishBoiled}</Text>
             <Image style={styles.ratingStars} resizeMode='contain' source={{uri: this.props.ratingUrl}}/>
           </View>
         </View>
 
         <View style={styles.overlayContainer}>
           <View style={styles.labelsContainer}>
-            <Text allowFontScaling={false} style={styles.title}>{this.props.title}</Text>
+            <Text allowFontScaling={false} numberOfLines={1} style={styles.title}>{this.props.title}</Text>
             <Text allowFontScaling={false} numberOfLines={0} style={styles.address}>{this.props.address} • {this.props.city}</Text>
           </View>
           <View style={styles.distanceContainer}>

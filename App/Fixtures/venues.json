@@ -1,92 +1,144 @@
 {
   "venues": [
     {
-      "name": "Bevi Seafood",
-      "oysters": "",
-      "crawfish": {
-        "boiled": "$3.50",
-        "live": "$3.00"
-        },
+      "name": "Bevi Seafood Co.",
+      "phone": "5048855003",
+      "yelp_id": "bevi-seafood-co-metairie",
       "distance": "2.12 mi",
-      "picture": "http://eattheinvaders.org/wp-content/uploads/2013/09/How_To_Eat_crawfish.jpg",
-      "address": "4713 Hastings St.",
+      "picture": "http://s3-media3.fl.yelpcdn.com/bphoto/rOziJvXOsyoVE2C2KEfnLg/o.jpg",
+      "yelp_picture": "http://s3-media3.fl.yelpcdn.com/bphoto/sPwR8NZ7_0zZdB5T0HBSIw/ms.jpg",
+      "address": "4701 Airline Dr",
       "city": "Metairie",
+      "state": "LA",
+      "zip": "70001",
       "rating_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
-      "latitude": "",
-      "longitude": ""
+      "latitude": "29.975785240531",
+      "longitude": "-90.1821944117546",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$3.50",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Deanie's Seafood",
-      "crawfish": {
-        "boiled": "$3.55",
-        "live": "$3.00"
-        },
+      "phone": "5048314141",
+      "yelp_id": "deanies-seafood-metairie",
       "distance": "2.50 mi",
-      "picture": "http://www.toursbyisabelle.com/uploads/images/crawfish,P20boil.JPG.pagespeed.ce.yjGJDSC3TE.jpg",
-      "address": "4713 Hastings St.",
-      "city": "New Orleans",
+      "picture": "http://s3-media4.fl.yelpcdn.com/bphoto/wjFCPkYO0Lp7OjuulQsZfQ/o.jpg",
+      "yelp_picture": "http://s3-media1.fl.yelpcdn.com/bphoto/08pha8W-CHPC0xbY_GxHkQ/ms.jpg",
+      "address": "1713 Lake Ave",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005",
       "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
-      "favorite": "true"
+      "latitude": "30.0186596",
+      "longitude": "-90.1229401",
+      "favorite": "true",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$3.60",
+      "crawifh_live": "$3.00"
     },
     {
       "name": "Don's Seafood",
-      "crawfish": {
-        "boiled": "$3.75",
-        "live": "$3.00"
-        },
+      "phone": "5048891550",
+      "yelp_id": "dons-seafood-metairie-2",
       "distance": "1.44 mi",
-      "picture": "http://www.bestofvegas.com/cdn/Restaurants/Buzios_Seafood_Restaurant/images/Buzios-Seafood-Restaurant-las-vegas-kitchen.JPG",
-      "address": "4713 Hastings St.",
+      "picture": "http://s3-media3.fl.yelpcdn.com/bphoto/QbN3DwAh8xJ4Op2U5mD4HQ/o.jpg",
+      "yelp_picture": "http://s3-media2.fl.yelpcdn.com/bphoto/dqh1JxGnNIK-GMssi2cE-w/ms.jpg",
+      "address": "4801 Veterans Memorial Blvd",
       "city": "Metairie",
+      "state": "LA",
+      "zip": "70006",
       "rating_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
-      "favorite": "true"
+      "latitude": "30.0059548829212",
+      "longitude": "-90.1909128472198",
+      "favorite": "true",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$3.75",
+      "crawifh_live": "$3.00"
     },
     {
-      "name": "Landry's Seafood",
-      "crawfish": {
-        "boiled": "$4.00",
-        "live": "$3.00"
-        },
+      "name": "Dennis' Seafood",
+      "phone": "5048852209",
+      "yelp_id": "dennisseafood-metairie",
       "distance": "9.1 mi",
-      "picture": "http://www.westvegas.com/restaurants/LANDRYS_SEAFOOD_RESTAURANT_.jpg",
-      "address": "4713 Hastings St. • New Orleans",
-      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png"
-    },
-    {
-      "name": "Deanie's Seafood",
-      "crawfish": {
-        "boiled": "$4.10",
-        "live": "$3.00"
-        },
-      "distance": "5.11 mi",
-      "picture": "http://media-cdn.tripadvisor.com/media/photo-s/01/b5/97/91/the-seafood-restaurant.jpg",
-      "address": "4713 Hastings St.",
-      "city": "New Orleans",
-      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png"
-    },
-    {
-      "name": "Soylent Green",
-      "crawfish": {
-        "boiled": "$4.50",
-        "live": "$3.00"
-        },
-      "distance": "0.64 mi",
-      "picture": "http://www.greatnewplaces.com/images/Culinary/img16197_08112014115521.jpeg",
-      "address": "4713 Hastings St.",
-      "city": "New Orleans",
-      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png"
-    },
-    {
-      "name": "Iris",
-      "crawfish": {
-        "boiled": "$5.50",
-        "live": "$3.00"
-        },
-      "distance": "1.12 mi",
-      "picture": "http://news.uniquepakistan.com.pk/wp-content/uploads/2014/08/1135-550x300.jpg",
-      "address": "4713 Hastings St.",
+      "picture": "http://s3-media4.fl.yelpcdn.com/bphoto/h_qnVDiLggBWSgRh70UevQ/o.jpg",
+      "yelp_picture": "http://s3-media1.fl.yelpcdn.com/bphoto/DG88942Y6_R-xBnuUffmkg/ms.jpg",
+      "address": "4428 Lorino St",
       "city": "Metairie",
-      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png"
+      "state": "LA",
+      "zip": "70006",
+      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "latitude": "30.01752",
+      "longitude": "-90.1876",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$4.00",
+      "crawifh_live": "$3.00"
+    },
+    {
+      "name": "Captain Sid's Seafood",
+      "phone": "5048312840",
+      "yelp_id": "captain-sids-seafood-metairie",
+      "distance": "5.11 mi",
+      "picture": "http://s3-media4.fl.yelpcdn.com/bphoto/7ktYeAd6qfxqZznZrSERlQ/o.jpg",
+      "yelp_picture": "http://s3-media4.fl.yelpcdn.com/bphoto/RPBaYR54FajoGpbca4qrgw/ms.jpg",
+      "address": "1700 Lake Ave",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005",
+      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "latitude": "30.0182499736547",
+      "longitude": "-90.1232012361288",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$4.10",
+      "crawifh_live": "$3.00"
+    },
+    {
+      "name": "Acme Oyster House",
+      "phone": "5043094056",
+      "yelp_id": "acme-oyster-house-metairie",
+      "distance": "0.64 mi",
+      "picture": "http://s3-media4.fl.yelpcdn.com/bphoto/HmzeGInJKNPr_TULO1_nGQ/o.jpg",
+      "yelp_picture": "http://s3-media1.fl.yelpcdn.com/bphoto/HmzeGInJKNPr_TULO1_nGQ/ms.jpg",
+      "address": "3000 Veterans Memorial Blvd",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70002",
+      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+      "latitude": "30.0026073635696",
+      "longitude": "-90.1530120372772",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$4.50",
+      "crawifh_live": "$3.00"
+    },
+    {
+      "name": "Drago's Seafood Restaurant",
+      "phone": "5048889254",
+      "yelp_id": "dragos-seafood-restaurant-metairie",
+      "distance": "1.12 mi",
+      "picture": "http://s3-media1.fl.yelpcdn.com/bphoto/KiXtp67UD6oiR4VYD2PBQw/o.jpg",
+      "yelp_picture": "http://s3-media3.fl.yelpcdn.com/bphoto/yRUOrTpxWwwLvv3NaDRD5w/ms.jpg",
+      "address": "3232 N Arnoult Rd",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70002",
+      "rating_url": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+      "latitude": "30.0090359151363",
+      "longitude": "-90.1604953408241",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$5.50",
+      "crawifh_live": "$5.00"
     }
   ]
 }

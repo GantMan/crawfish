@@ -4,7 +4,9 @@ import React, { ScrollView, View, MapView, TouchableHighlight, Image, Text, Text
 // import { Routes } from '../Navigation/'
 import _ from 'lodash'
 import {connect} from 'react-redux/native'
+import {Icon} from 'react-native-icons'
 import styles from '../Styles/DetailsScreenStyle'
+import { Images, Metrics } from '../Themes'
 
 class DetailsScreen extends React.Component {
 
@@ -26,7 +28,19 @@ class DetailsScreen extends React.Component {
 
   componentWillMount () {
     let currentVenueIndex = _.findIndex(this.props.venueList, 'name', this.props.selectedVenue)
-    this.setState({currentVenue: this.props.venueList[currentVenueIndex]})
+    this.setState({ currentVenue: this.props.venueList[currentVenueIndex] || this.props.venueList[0] })
+  }
+
+  submitButton () {
+    window.alert('Submitting')
+  }
+
+  handleClosed (closed) {
+    if (closed === 'true') {
+      return ('No')
+    } else if (closed === 'false') {
+      return ('Yes')
+    }
   }
 
   render () {
@@ -39,36 +53,82 @@ class DetailsScreen extends React.Component {
             <MapView style={styles.map}
               scrollEnabled = {false}
               region = {{
-                latitude: 29.95,
-                longitude: -90.1,
-                latitudeDelta: 0.15,
-                longitudeDelta: 0.15
+                latitude: this.state.currentVenue.latitude,
+                longitude: this.state.currentVenue.longitude,
+                latitudeDelta: 0.08,
+                longitudeDelta: 0.08
               }}
               annotations={[
-                {latitude: 29.95, longitude: -90.1}
+                {latitude: `${this.state.currentVenue.latitude}`, longitude: `${this.state.currentVenue.longitude}`}
               ]}
             />
+            <View style={styles.mapButtonsContainer}>
+              <TouchableHighlight
+                style={styles.directionsButton}
+                underlayColor='red'
+                onPress={this.submitButton.bind(this)}
+              >
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name={'fontawesome|location-arrow'}
+                    size={20}
+                    color={'white'}
+                    style={{width: 20, height: 20, marginTop: 0, marginLeft: 0}}
+                  />
+                  <Text allowFontScaling={false} style={styles.mapButtonsLabel}>Directions</Text>
+                </View>
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={styles.callButton}
+                underlayColor='red'
+                onPress={this.submitButton.bind(this)}
+              >
+                <View style={{flexDirection: 'row'}}>
+                  <Icon
+                    name={'fontawesome|phone'}
+                    size={20}
+                    color={'white'}
+                    style={{width: 20, height: 20, marginTop: 0, marginLeft: 0}}
+                  />
+                  <Text allowFontScaling={false} style={styles.mapButtonsLabel}>Call</Text>
+                </View>
+              </TouchableHighlight>
+            </View>
           </View>
 
           <View style={styles.detailsContainer}>
             <View style={styles.headerContainer}>
               <Text allowFontScaling={false} style={styles.header}>{this.state.currentVenue.name}</Text>
             </View>
+            <View>
+              <View style={styles.separatorLine}/>
+              <Image style={styles.divider} source={Images.divider} />
+            </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Address</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+              <View style={styles.dataContainer}>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.address}</Text>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.city}, {this.state.currentVenue.state} {this.state.currentVenue.zip}</Text>
+              </View>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Phone</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+              <View style={styles.dataContainer}>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.phone}</Text>
+              </View>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Hours</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>HELLO</Text>
+              <View style={styles.dataContainer}>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.hours}</Text>
+                <Text allowFontScaling={false} style={styles.dataLabel}>{this.state.currentVenue.closed}</Text>
+              </View>
             </View>
             <View style={styles.labelContainer}>
               <Text allowFontScaling={false} style={styles.boldLabel}>Rating</Text>
-              <Text allowFontScaling={false} style={styles.dataLabel}>* * * *</Text>
+              <View style={{flex: 2, justifyContent: 'center'}}>
+                <Image style={{width: 100, height: 20, alignSelf: 'flex-start'}} resizeMode='contain' source={{uri: this.state.currentVenue.rating_url}}/>
+              </View>
             </View>
 
             <View style={styles.line}/>
@@ -82,6 +142,7 @@ class DetailsScreen extends React.Component {
             <TouchableHighlight
               style={styles.submitButton}
               underlayColor='red'
+              onPress={this.submitButton.bind(this)}
             >
               <Text allowFontScaling={false} style={{color: 'white', fontSize: 16}}>Submit</Text>
             </TouchableHighlight>
