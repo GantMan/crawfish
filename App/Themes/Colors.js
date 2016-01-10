@@ -16,7 +16,8 @@ const colors = {
   orange: '#fc9f35',
   lightYellow: '#e6da75',
   fuckingYellow: '#fffb21',
-  darkRed: '#5d1717'
+  darkRed: '#5d1717',
+  softLight: 'rgba(255,255,255, 0.15)'
 }
 
 export default colors
