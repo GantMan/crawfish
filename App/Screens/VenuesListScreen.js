@@ -26,6 +26,10 @@ class VenuesListScreen extends React.Component {
     venueList: React.PropTypes.array
   }
 
+  toggleVenueFavorite (rowData) {
+    window.alert(rowData.name)
+  }
+
   componentDidMount () {
     this.props.navigator.setState({
       leftButton: this.favoritesButton(false),
@@ -86,6 +90,7 @@ class VenuesListScreen extends React.Component {
         crawfishBoiled={rowData.crawfish_boiled}
         ratingUrl={rowData.rating_url}
         favorite={rowData.favorite}
+        toggleFavorite={this.toggleVenueFavorite.bind(this, rowData)}
         />
       </TouchableOpacity>
     )
