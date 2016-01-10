@@ -6,6 +6,7 @@ import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
 import {Icon} from 'react-native-icons'
+import _ from 'lodash'
 
 class VenuesListScreen extends React.Component {
 
@@ -111,6 +112,18 @@ class VenuesListScreen extends React.Component {
     )
   }
 
+  venues () {
+    if (this.state.favoritesOn) {
+      let favorites = _.filter(this.props.venueList, (v) => {
+        return v.favorite === 'true'
+      })
+      console.log(favorites)
+      return favorites
+    } else {
+      return this.props.venueList
+    }
+  }
+
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
     return (
@@ -121,7 +134,7 @@ class VenuesListScreen extends React.Component {
         <ScrollView>
           <ListView
             style={styles.listy}
-            dataSource={this.state.dataSource.cloneWithRows(this.props.venueList)}
+            dataSource={this.state.dataSource.cloneWithRows(this.venues())}
             renderRow={this.customRowRender.bind(this)}
           />
         </ScrollView>

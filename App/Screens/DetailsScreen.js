@@ -6,7 +6,7 @@ import _ from 'lodash'
 import {connect} from 'react-redux/native'
 import {Icon} from 'react-native-icons'
 import styles from '../Styles/DetailsScreenStyle'
-import { Images, Metrics } from '../Themes'
+import { Images } from '../Themes'
 
 class DetailsScreen extends React.Component {
 
