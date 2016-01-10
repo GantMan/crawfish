@@ -14,7 +14,8 @@ class VenuesListScreen extends React.Component {
     let ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
     this.state = {
       dataSource: ds,
-      showModal: false
+      showModal: false,
+      favoritesOn: false
     }
   }
 
@@ -26,14 +27,36 @@ class VenuesListScreen extends React.Component {
 
   componentDidMount () {
     this.props.navigator.setState({
+      leftButton: this.favoritesButton(false),
       rightButton: this.searchButton()
     })
+  }
+
+  favoritesButton (is_on) {
+    let starIcon = is_on ? 'fontawesome|star' : 'fontawesome|star-o'
+    return (
+      <TouchableOpacity onPress={this.favoritesToggle.bind(this)}>
+        <View style={styles.leftButton}>
+          <Icon
+            name={starIcon}
+            size={17}
+            color={'white'}
+            style={{width: 20, height: 20, backgroundColor: '#383a3d'}}
+          />
+        </View>
+      </TouchableOpacity>
+    )
+  }
+
+  favoritesToggle () {
+    this.setState({favoritesOn: !this.state.favoritesOn})
+    this.props.navigator.setState({leftButton: this.favoritesButton(this.state.favoritesOn)})
   }
 
   searchButton () {
     return (
       <TouchableOpacity onPress={() => this.setState({showModal: true})}>
-        <View style={styles.searchButton}>
+        <View style={styles.rightButton}>
           <Icon
             name={'fontawesome|search'}
             size={17}
