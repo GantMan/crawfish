@@ -29,6 +29,10 @@ class DetailsScreen extends React.Component {
   componentWillMount () {
     let currentVenueIndex = _.findIndex(this.props.venueList, 'name', this.props.selectedVenue)
     this.setState({ currentVenue: this.props.venueList[currentVenueIndex] || this.props.venueList[0] })
+    this.props.navigator.setState({
+      leftButton: null,
+      rightButton: null
+    })
   }
 
   submitButton () {
@@ -53,13 +57,13 @@ class DetailsScreen extends React.Component {
             <MapView style={styles.map}
               scrollEnabled = {false}
               region = {{
-                latitude: this.state.currentVenue.latitude,
-                longitude: this.state.currentVenue.longitude,
+                latitude: parseFloat(this.state.currentVenue.latitude),
+                longitude: parseFloat(this.state.currentVenue.longitude),
                 latitudeDelta: 0.08,
                 longitudeDelta: 0.08
               }}
               annotations={[
-                {latitude: `${this.state.currentVenue.latitude}`, longitude: `${this.state.currentVenue.longitude}`}
+                {latitude: parseFloat(this.state.currentVenue.latitude), longitude: parseFloat(this.state.currentVenue.longitude)}
               ]}
             />
             <View style={styles.mapButtonsContainer}>
