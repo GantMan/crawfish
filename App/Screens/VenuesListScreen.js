@@ -32,45 +32,15 @@ class VenuesListScreen extends React.Component {
 
   componentDidMount () {
     this.props.navigator.setState({
-      leftButton: this.favoritesButton(false),
-      rightButton: this.searchButton()
+      tapFavorites: this.favoritesToggle.bind(this),
+      tapSearch: () => this.setState({showModal: true})
     })
   }
 
-  favoritesButton (is_on) {
-    let starIcon = is_on ? 'fontawesome|star' : 'fontawesome|star-o'
-    return (
-      <TouchableOpacity onPress={this.favoritesToggle.bind(this)}>
-        <View style={styles.leftButton}>
-          <Icon
-            name={starIcon}
-            size={17}
-            color={'white'}
-            style={{width: 20, height: 20, backgroundColor: '#383a3d'}}
-          />
-        </View>
-      </TouchableOpacity>
-    )
-  }
-
   favoritesToggle () {
-    this.setState({favoritesOn: !this.state.favoritesOn})
-    this.props.navigator.setState({leftButton: this.favoritesButton(this.state.favoritesOn)})
-  }
-
-  searchButton () {
-    return (
-      <TouchableOpacity onPress={() => this.setState({showModal: true})}>
-        <View style={styles.rightButton}>
-          <Icon
-            name={'fontawesome|search'}
-            size={17}
-            color={'white'}
-            style={{width: 20, height: 20, backgroundColor: '#383a3d'}}
-          />
-        </View>
-      </TouchableOpacity>
-    )
+    let newFavorites = {favoritesOn: !this.state.favoritesOn}
+    this.props.navigator.setState(newFavorites)
+    this.setState(newFavorites)
   }
 
   cellPress (rowData) {

@@ -27,17 +27,5 @@ export default StyleSheet.create({
     right: 0,
     position: 'absolute',
     backgroundColor: Colors.transWhite
-  },
-  leftButton: {
-    marginLeft: 10,
-    marginTop: 7,
-    padding: 3,
-    borderRadius: 3
-  },
-  rightButton: {
-    marginRight: 10,
-    marginTop: 7,
-    padding: 3,
-    borderRadius: 3
   }
 })

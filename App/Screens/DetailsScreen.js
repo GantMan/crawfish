@@ -31,7 +31,7 @@ class DetailsScreen extends React.Component {
     this.setState({ currentVenue: this.props.venueList[currentVenueIndex] || this.props.venueList[0] })
     this.props.navigator.setState({
       leftButton: null,
-      rightButton: null
+      // rightButton: null
     })
   }
 
