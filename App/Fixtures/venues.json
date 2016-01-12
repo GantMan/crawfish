@@ -18,7 +18,7 @@
       "hours": "9:00am - 10:00pm",
       "closed": "Closed: Tuesday",
       "crawfish_boiled": "$3.50",
-      "crawifh_live": "$3.00"
+      "crawfish_live": "$3.00"
     },
     {
       "name": "Deanie's Seafood",
@@ -38,7 +38,7 @@
       "hours": "9:00am - 10:00pm",
       "closed": "Closed: Tuesday",
       "crawfish_boiled": "$3.60",
-      "crawifh_live": "$3.00"
+      "crawfish_live": "$3.00"
     },
     {
       "name": "Don's Seafood",
@@ -58,7 +58,7 @@
       "hours": "9:00am - 10:00pm",
       "closed": "Closed: Tuesday",
       "crawfish_boiled": "$3.75",
-      "crawifh_live": "$3.00"
+      "crawfish_live": "$3.00"
     },
     {
       "name": "Dennis' Seafood",
@@ -78,7 +78,7 @@
       "hours": "9:00am - 10:00pm",
       "closed": "Closed: Tuesday",
       "crawfish_boiled": "$4.00",
-      "crawifh_live": "$3.00"
+      "crawfish_live": "$3.00"
     },
     {
       "name": "Captain Sid's Seafood",
@@ -98,7 +98,7 @@
       "hours": "9:00am - 10:00pm",
       "closed": "Closed: Tuesday",
       "crawfish_boiled": "$4.10",
-      "crawifh_live": "$3.00"
+      "crawfish_live": "$3.00"
     },
     {
       "name": "Acme Oyster House",
@@ -118,7 +118,7 @@
       "hours": "9:00am - 10:00pm",
       "closed": "Closed: Tuesday",
       "crawfish_boiled": "$4.50",
-      "crawifh_live": "$3.00"
+      "crawfish_live": "$3.00"
     },
     {
       "name": "Drago's Seafood Restaurant",
@@ -138,7 +138,87 @@
       "hours": "9:00am - 10:00pm",
       "closed": "Closed: Tuesday",
       "crawfish_boiled": "$5.50",
-      "crawifh_live": "$5.00"
+      "crawfish_live": "$5.00"
+    },
+    {
+      "name": "The Galley",
+      "phone": "5048320955",
+      "yelp_id": "the-galley-metairie-3",
+      "distance": "1.12 mi",
+      "picture": "http://s3-media1.fl.yelpcdn.com/bphoto/KiXtp67UD6oiR4VYD2PBQw/o.jpg",
+      "yelp_picture": "http://s3-media4.fl.yelpcdn.com/bphoto/AFR8E39vMdglJc4igrEBLA/ms.jpg",
+      "address": "2535 Metairie Rd",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70001",
+      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "latitude": "29.9812393",
+      "longitude": "-90.1511765",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$7.50",
+      "crawfish_live": "$6.00"
+    },
+    {
+      "name": "Bobby's Seafood",
+      "phone": "5047382104",
+      "yelp_id": "bobbys-seafood-new-orleans",
+      "distance": "1.12 mi",
+      "picture": "http://s3-media1.fl.yelpcdn.com/bphoto/KiXtp67UD6oiR4VYD2PBQw/o.jpg",
+      "yelp_picture": "http://s3-media3.fl.yelpcdn.com/bphoto/h71mJQEwAdZTQiNmXG43cQ/ms.jpg",
+      "address": "9013 Jefferson Hwy",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70123",
+      "rating_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+      "latitude": "29.9471110850573",
+      "longitude": "-90.2135018259287",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$4.50",
+      "crawfish_live": "$4.00"
+    },
+    {
+      "name": "Superior Seafood & Oyster Bar",
+      "phone": "5042933474",
+      "yelp_id": "superior-seafood-and-oyster-bar-new-orleans",
+      "distance": "1.12 mi",
+      "picture": "http://s3-media1.fl.yelpcdn.com/bphoto/KiXtp67UD6oiR4VYD2PBQw/o.jpg",
+      "yelp_picture": "http://s3-media3.fl.yelpcdn.com/bphoto/DzBy52gNwxDCKNVwyOqzSg/ms.jpg",
+      "address": "4338 St. Charles Ave",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70115",
+      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "latitude": "29.92623550149",
+      "longitude": "-90.1016806155892",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$6.50",
+      "crawfish_live": ""
+    },
+    {
+      "name": "Perino's Boiling Pot",
+      "phone": "5043405560",
+      "yelp_id": "perinos-boiling-pot-harvey",
+      "distance": "1.12 mi",
+      "picture": "http://s3-media1.fl.yelpcdn.com/bphoto/KiXtp67UD6oiR4VYD2PBQw/o.jpg",
+      "yelp_picture": "http://s3-media4.fl.yelpcdn.com/bphoto/wSEY_ESE0Con19_CbOR1VQ/ms.jpg",
+      "address": "3754 W Bank Expy",
+      "city": "Harvey",
+      "state": "LA",
+      "zip": "70058",
+      "rating_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "latitude": "29.8954201",
+      "longitude": "-90.0883713",
+      "favorite": "false",
+      "hours": "9:00am - 10:00pm",
+      "closed": "Closed: Tuesday",
+      "crawfish_boiled": "$5.50",
+      "crawfish_live": "4.00"
     }
   ]
 }
