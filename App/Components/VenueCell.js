@@ -9,13 +9,6 @@ import styles from '../Styles/VenueCellStyle'
 
 export default class VenueCell extends React.Component {
 
-  // TODO Gant add ability to update favorite bool
-  // in fixture data
-
-  makeFavorite (title) {
-    window.alert(`${title} \nYou're my Favorite`)
-  }
-
   renderIcon () {
     if (this.props.favorite === 'true') {
       return (
@@ -48,7 +41,8 @@ export default class VenueCell extends React.Component {
     crawfishBoiled: React.PropTypes.string,
     pressDirections: React.PropTypes.func,
     navigator: React.PropTypes.object,
-    favorite: React.PropTypes.bool
+    favorite: React.PropTypes.string,
+    toggleFavorite: React.PropTypes.func
   }
 
   render () {
@@ -75,7 +69,7 @@ export default class VenueCell extends React.Component {
         <View style={styles.triangleCorner}>
           <TouchableOpacity
             style={styles.starButton}
-            onPress={this.makeFavorite.bind(this, this.props.title)}
+            onPress={this.props.toggleFavorite}
             >
             <View style={styles.iconContainer}>
               {this.renderIcon()}

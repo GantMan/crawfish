@@ -6,6 +6,7 @@ import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
 import {Icon} from 'react-native-icons'
+import _ from 'lodash'
 
 class VenuesListScreen extends React.Component {
 
@@ -14,7 +15,8 @@ class VenuesListScreen extends React.Component {
     let ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
     this.state = {
       dataSource: ds,
-      showModal: false
+      showModal: false,
+      favoritesOn: false
     }
   }
 
@@ -24,25 +26,21 @@ class VenuesListScreen extends React.Component {
     venueList: React.PropTypes.array
   }
 
+  toggleVenueFavorite (rowData) {
+    window.alert(rowData.name)
+  }
+
   componentDidMount () {
     this.props.navigator.setState({
-      rightButton: this.searchButton()
+      tapFavorites: this.favoritesToggle.bind(this),
+      tapSearch: () => this.setState({showModal: true})
     })
   }
 
-  searchButton () {
-    return (
-      <TouchableOpacity onPress={() => this.setState({showModal: true})}>
-        <View style={styles.searchButton}>
-          <Icon
-            name={'fontawesome|search'}
-            size={17}
-            color={'white'}
-            style={{width: 20, height: 20, backgroundColor: '#383a3d'}}
-          />
-        </View>
-      </TouchableOpacity>
-    )
+  favoritesToggle () {
+    let newFavorites = {favoritesOn: !this.state.favoritesOn}
+    this.props.navigator.setState(newFavorites)
+    this.setState(newFavorites)
   }
 
   cellPress (rowData) {
@@ -62,6 +60,7 @@ class VenuesListScreen extends React.Component {
         crawfishBoiled={rowData.crawfish_boiled}
         ratingUrl={rowData.rating_url}
         favorite={rowData.favorite}
+        toggleFavorite={this.toggleVenueFavorite.bind(this, rowData)}
         />
       </TouchableOpacity>
     )
@@ -88,6 +87,18 @@ class VenuesListScreen extends React.Component {
     )
   }
 
+  venues () {
+    if (this.state.favoritesOn) {
+      let favorites = _.filter(this.props.venueList, (v) => {
+        return v.favorite === 'true'
+      })
+      console.log(favorites)
+      return favorites
+    } else {
+      return this.props.venueList
+    }
+  }
+
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
     return (
@@ -98,7 +109,7 @@ class VenuesListScreen extends React.Component {
         <ScrollView>
           <ListView
             style={styles.listy}
-            dataSource={this.state.dataSource.cloneWithRows(this.props.venueList)}
+            dataSource={this.state.dataSource.cloneWithRows(this.venues())}
             renderRow={this.customRowRender.bind(this)}
           />
         </ScrollView>

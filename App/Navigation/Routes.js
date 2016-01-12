@@ -11,7 +11,9 @@ export default new class Routes {
   get VenuesListScreen () {
     return {
       title: 'CRAWFISH',
-      component: require('../Screens/VenuesListScreen')
+      component: require('../Screens/VenuesListScreen'),
+      rightButton: 'SEARCH',
+      leftButton: 'FAVORITE'
     }
   }
 
