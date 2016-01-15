@@ -749,8 +749,7 @@
     "url": "http://www.yelp.com/biz/zimmers-seafood-new-orleans?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
     "categories": [
         [
-            "Seafood",
-            "seafood"
+            "Seafood", "seafood"
         ]
     ],
     "phone": "5042827150",
@@ -1110,6 +1109,52 @@
         "coordinate": {
             "latitude": 29.9582139307172,
             "longitude": -90.0591687426565
+        },
+        "state_code": "LA"
+    }
+},
+{
+    "is_claimed": false,
+    "rating": 4.0,
+    "mobile_url": "http://m.yelp.com/biz/michaels-seafood-new-orleans?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+    "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+    "review_count": 7,
+    "name": "Michael's Seafood",
+    "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+    "url": "http://www.yelp.com/biz/michaels-seafood-new-orleans?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+    "categories": [
+        [
+            "Seafood Markets",
+            "seafoodmarkets"
+        ],
+        [
+            "Seafood",
+            "seafood"
+        ]
+    ],
+    "phone": "5048356002",
+    "snippet_text": "Ordered 60 lbs of live crawfish.  When I got there, the sacks were ready and they even loaded them in the truck for me.  Staff was friendly as always, and...",
+    "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/kRjTk1p8xLgY6E-ggxVCjg/ms.jpg",
+    "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/IbNRetWGXzvRoDsf2EffFw/ms.jpg",
+    "display_phone": "+1-504-835-6002",
+    "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+    "id": "michaels-seafood-new-orleans",
+    "is_closed": false,
+    "location": {
+        "city": "New Orleans",
+        "display_address": [
+            "3917 Jefferson Hwy",
+            "New Orleans, LA 70121"
+        ],
+        "geo_accuracy": 8.0,
+        "postal_code": "70121",
+        "country_code": "US",
+        "address": [
+            "3917 Jefferson Hwy"
+        ],
+        "coordinate": {
+            "latitude": 29.9630909,
+            "longitude": -90.1667175
         },
         "state_code": "LA"
     }
