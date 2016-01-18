@@ -2250,3 +2250,101 @@
         "state_code": "LA"
     }
 },
+{
+    "is_claimed": true,
+    "rating": 4.0,
+    "mobile_url": "http://m.yelp.com/biz/fishermans-cove-seafood-kenner?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+    "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+    "review_count": 50,
+    "name": "Fisherman's Cove Seafood",
+    "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+    "url": "http://www.yelp.com/biz/fishermans-cove-seafood-kenner?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+    "categories": [
+        [
+            "Seafood",
+            "seafood"
+        ],
+        [
+            "Seafood Markets",
+            "seafoodmarkets"
+        ]
+    ],
+    "phone": "5044433474",
+    "snippet_text": "Perfect local seafood diner\nBeen there many times after a recommendation from the airport hilton. \n\nVery casual \nExcellent local food",
+    "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/1i8BQha-mAbGftkoaFA6GA/ms.jpg",
+    "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/JsCoPD_-O-P-3WVHxO0FlQ/ms.jpg",
+    "display_phone": "+1-504-443-3474",
+    "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+    "id": "fishermans-cove-seafood-kenner",
+    "is_closed": false,
+    "location": {
+        "city": "Kenner",
+        "display_address": [
+            "3201 Williams Blvd",
+            "Kenner",
+            "Kenner, LA 70065"
+        ],
+        "geo_accuracy": 8.0,
+        "neighborhoods": [
+            "Kenner"
+        ],
+        "postal_code": "70065",
+        "country_code": "US",
+        "address": [
+            "3201 Williams Blvd"
+        ],
+        "coordinate": {
+            "latitude": 30.01424,
+            "longitude": -90.24006
+        },
+        "state_code": "LA"
+    }
+},
+{
+    "is_claimed": false,
+    "rating": 4.0,
+    "mobile_url": "http://m.yelp.com/biz/kenner-seafood-kenner?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+    "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+    "review_count": 93,
+    "name": "Kenner Seafood",
+    "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+    "url": "http://www.yelp.com/biz/kenner-seafood-kenner?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=a26VV-yOvKNh6DTjMyV9lQ",
+    "categories": [
+        [
+            "Seafood",
+            "seafood"
+        ]
+    ],
+    "menu_date_updated": 1452776494,
+    "phone": "5044664701",
+    "snippet_text": "it is a local place that keeps aline much like the other yelpers will testify to.\n\nIt seems to have an interesting array of characters that are in and out....",
+    "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/c533z9HFCE7WBjnTTljUUQ/ms.jpg",
+    "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/4d9gvlN2s0sY26IPYmT_og/ms.jpg",
+    "display_phone": "+1-504-466-4701",
+    "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+    "menu_provider": "single_platform",
+    "id": "kenner-seafood-kenner",
+    "is_closed": false,
+    "location": {
+        "city": "Kenner",
+        "display_address": [
+            "3140 Loyola Dr",
+            "Kenner",
+            "Kenner, LA 70065"
+        ],
+        "geo_accuracy": 8.0,
+        "neighborhoods": [
+            "Kenner"
+        ],
+        "postal_code": "70065",
+        "country_code": "US",
+        "address": [
+            "3140 Loyola Dr"
+        ],
+        "coordinate": {
+            "latitude": 30.01164,
+            "longitude": -90.26629
+        },
+        "state_code": "LA"
+    }
+}
