@@ -79,7 +79,7 @@ class VenuesListScreen extends React.Component {
     let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
     let d = R * c // Distance in mi
     let dist = Math.round(d * 100) / 100 // Round to two decimals
-    console.log(dist, 'DISTANCE')
+    // console.log(dist, 'DISTANCE')
     return (dist)
   }
 
@@ -92,7 +92,7 @@ class VenuesListScreen extends React.Component {
       userLat: position.coords.latitude,
       userLon: position.coords.longitude
     })
-    console.log(this.state.userLat, this.state.userLon, 'LOOK AT ME')
+    console.log(this.state.userLat, this.state.userLon, 'User Position')
   }
 
   customRowRender (rowData) {
