@@ -5,6 +5,7 @@ import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
+import Search from '../Components/Search'
 // import {Icon} from 'react-native-icons'
 import _ from 'lodash'
 
@@ -146,11 +147,18 @@ class VenuesListScreen extends React.Component {
     }
   }
 
+  handleSearchPress () {
+    this.setState({showModal: false})
+  }
+
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
     return (
       <View style={styles.background}>
-        { this.renderModalSearch() }
+        <Search
+          isVisible={this.state.showModal}
+          onPress={this.handleSearchPress.bind(this)}
+        />
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
         <View style={styles.overlay}/>
         <ScrollView>
