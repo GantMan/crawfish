@@ -15,7 +15,7 @@ export default class Crawfish extends React.Component {
 
   requestLocation () {
     navigator.geolocation.getCurrentPosition(
-      (position) => this.gotPosition(position),
+      (position) => console.log(position),
       (error) => console.log(error),
       {
         enableHighAccuracy: true,
@@ -23,30 +23,6 @@ export default class Crawfish extends React.Component {
         maximumAge: 1000
       }
     )
-  }
-
-  getDistanceFromLatLonInKm (lat1, lon1, lat2, lon2) {
-    let R = 3959 // Radius of the earth in mi
-    let dLat = this.deg2rad(lat2 - lat1) // deg2rad below
-    let dLon = this.deg2rad(lon2 - lon1)
-    let a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2)
-    let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-    let d = R * c // Distance in mi
-    let dist = Math.round(d * 100) / 100 // Round to two decimals
-    console.log(dist, 'DISTANCE')
-  }
-
-  deg2rad (deg) {
-    return deg * (Math.PI / 180)
-  }
-
-  gotPosition (position) {
-    let lat = position.coords.latitude
-    let lon = position.coords.longitude
-    console.log(lat, lon)
-    this.getDistanceFromLatLonInKm(lat, lon, 30.999, -90.999)
   }
 
   renderApp () {
