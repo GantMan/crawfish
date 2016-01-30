@@ -30,7 +30,7 @@ class DetailsScreen extends React.Component {
     let currentVenueIndex = _.findIndex(this.props.venueList, 'name', this.props.selectedVenue)
     this.setState({ currentVenue: this.props.venueList[currentVenueIndex] || this.props.venueList[0] })
     this.props.navigator.setState({
-      leftButton: null,
+      leftButton: null
       // rightButton: null
     })
   }
