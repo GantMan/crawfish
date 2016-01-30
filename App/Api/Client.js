@@ -3,19 +3,19 @@
 import Superagent from 'superagent'
 import Response from './Response'
 
-// const ENDPOINT = 'http://localhost:3000/'
+const ENDPOINT = 'http://localhost:3000/'
 
 // ------------- For Production ---------
-const ENDPOINT = 'https://www.wheredatcrawfish.com'
-const API_VERSION = 1
+// const ENDPOINT = 'https://www.wheredatcrawfish.com'
+// const API_VERSION = 1
 
 export default class Client {
 
   get fullDomain () {
     let uri = ENDPOINT
-    if (API_VERSION) {
-      uri = `${uri}/${API_VERSION}/`
-    }
+    // if (API_VERSION) {
+    //   uri = `${uri}/${API_VERSION}/`
+    // }
 
     return uri
   }

@@ -49,7 +49,9 @@ class VenuesListScreen extends React.Component {
   }
 
   getVenues () {
-    this.props.dispatch(VenueActionCreators.fetchVenues())
+    Venue.fetchVenues(this.client, (response) => {
+      console.log(response, 'HERE I AM!!!!!!!!')
+    })
   }
 
   componentWillMount () {
