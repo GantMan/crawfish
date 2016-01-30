@@ -688,10 +688,7 @@
       "distance": "5.05 mi",
       "picture": "",
       "yelp_picture": "http://s3-media2.fl.yelpcdn.com/bphoto/LdLt_sA-PAxbVN5Bh9rH1g/ms.jpg",
-      "address": [
-            "1100 N Peters St",
-            "Ste 25"
-        ],
+      "address": "1100 N Peters St Ste 25",
       "city": "New Orleans",
       "state": "LA",
       "zip": "70116",
@@ -851,11 +848,7 @@
       "distance": "1.5 mi",
       "picture": "",
       "yelp_picture": "http://s3-media4.fl.yelpcdn.com/bphoto/cqyJrie0laU5R4PqcYJdgQ/ms.jpg",
-      "address":
-        [
-          "2309 David Dr",
-          "Ste B"
-        ],
+      "address": "2309 David Dr Ste B",
       "city": "Metairie",
       "state": "LA",
       "zip": "70003",
@@ -1055,10 +1048,7 @@
       "distance": "5.9 mi",
       "picture": "",
       "yelp_picture": "http://s3-media3.fl.yelpcdn.com/bphoto/r7hA7ecwoD0mcTgGUq5dWw/ms.jpg",
-      "address": [
-        "91 Westbank Expy",
-        "Ste 600"
-        ],
+      "address": "91 Westbank Expy Ste 600",
       "city": "Gretna",
       "state": "LA",
       "zip": "70053",
