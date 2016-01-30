@@ -5,7 +5,7 @@ import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
-import {Icon} from 'react-native-icons'
+// import {Icon} from 'react-native-icons'
 import _ from 'lodash'
 
 class VenuesListScreen extends React.Component {
@@ -16,14 +16,18 @@ class VenuesListScreen extends React.Component {
     this.state = {
       dataSource: ds,
       showModal: false,
-      favoritesOn: false
+      favoritesOn: false,
+      userLat: '',
+      userLon: ''
     }
   }
 
   static propTypes = {
     navigator: React.PropTypes.object,
     dispatch: React.PropTypes.func,
-    venueList: React.PropTypes.array
+    venueList: React.PropTypes.array,
+    userLat: React.PropTypes.string,
+    userLon: React.PropTypes.string
   }
 
   toggleVenueFavorite (rowData) {
@@ -37,6 +41,10 @@ class VenuesListScreen extends React.Component {
     })
   }
 
+  componentWillMount () {
+    this.getLocation()
+  }
+
   favoritesToggle () {
     let newFavorites = {favoritesOn: !this.state.favoritesOn}
     this.props.navigator.setState(newFavorites)
@@ -48,15 +56,54 @@ class VenuesListScreen extends React.Component {
     this.props.navigator.push(Routes.DetailsScreen)
   }
 
+  getLocation () {
+    navigator.geolocation.getCurrentPosition(
+      (position) => this.gotPosition(position),
+      (error) => console.log(error),
+      {
+        enableHighAccuracy: true,
+        timeout: 20000,
+        maximumAge: 1000
+      }
+    )
+  }
+
+  getDistanceFromLatLonInMiles (lat1, lon1, lat2, lon2) {
+    let R = 3959 // Radius of the earth in mi
+    let dLat = this.deg2rad(lat2 - lat1) // deg2rad below
+    let dLon = this.deg2rad(lon2 - lon1)
+    let a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2)
+    let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+    let d = R * c // Distance in mi
+    let dist = Math.round(d * 100) / 100 // Round to two decimals
+    console.log(dist, 'DISTANCE')
+    return (dist)
+  }
+
+  deg2rad (deg) {
+    return deg * (Math.PI / 180)
+  }
+
+  gotPosition (position) {
+    this.setState({
+      userLat: position.coords.latitude,
+      userLon: position.coords.longitude
+    })
+    console.log(this.state.userLat, this.state.userLon, 'LOOK AT ME')
+  }
+
   customRowRender (rowData) {
     return (
       <TouchableOpacity onPress={this.cellPress.bind(this, rowData)}>
         <VenueCell
         imageUri={rowData.picture}
+        yelpPicture={rowData.yelp_picture}
         title={rowData.name}
         address={rowData.address}
         city={rowData.city}
-        distance={rowData.distance}
+        distance={this.getDistanceFromLatLonInMiles(this.state.userLat, this.state.userLon, rowData.latitude, rowData.longitude)}
         crawfishBoiled={rowData.crawfish_boiled}
         ratingUrl={rowData.rating_url}
         favorite={rowData.favorite}

@@ -34,6 +34,7 @@ export default class VenueCell extends React.Component {
   static propTypes = {
     title: React.PropTypes.string,
     imageUri: React.PropTypes.string,
+    yelpPicture: React.PropTypes.string,
     ratingUrl: React.PropTypes.string,
     address: React.PropTypes.string,
     city: React.PropTypes.string,
@@ -49,7 +50,7 @@ export default class VenueCell extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.backgroundContainer}>
-          <Image style={styles.myImage} source={{uri: this.props.imageUri}} defaultSource={Images.logo}/>
+          <Image style={styles.myImage} source={{uri: this.props.imageUri || this.props.yelpPicture}} defaultSource={Images.logo}/>
           <View style={styles.detailsContainer}>
             <Text allowFontScaling={false} style={styles.crawfishBoiled}>{this.props.crawfishBoiled}</Text>
             <Image style={styles.ratingStars} resizeMode='contain' source={{uri: this.props.ratingUrl}}/>
@@ -62,7 +63,7 @@ export default class VenueCell extends React.Component {
             <Text allowFontScaling={false} numberOfLines={0} style={styles.address}>{this.props.address} • {this.props.city}</Text>
           </View>
           <View style={styles.distanceContainer}>
-            <Text allowFontScaling={false} style={styles.distance}>{this.props.distance}</Text>
+            <Text allowFontScaling={false} style={styles.distance}>{this.props.distance} mi</Text>
           </View>
         </View>
 
