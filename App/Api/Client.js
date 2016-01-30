@@ -3,7 +3,10 @@
 import Superagent from 'superagent'
 import Response from './Response'
 
-const ENDPOINT = 'https://www.wheredatcrawfish.com/'
+// const ENDPOINT = 'http://localhost:3000/'
+
+// ------------- For Production ---------
+const ENDPOINT = 'https://www.wheredatcrawfish.com'
 const API_VERSION = 1
 
 export default class Client {

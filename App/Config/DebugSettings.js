@@ -1,7 +1,7 @@
 'use strict'
 
 const SETTINGS = {
-  useFixtures: true
+  useFixtures: false
 }
 
 export default SETTINGS

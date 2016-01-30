@@ -1,12 +1,27 @@
-'use strict'
-
 import { VenueActions } from '../Actions/VenueActions'
 
 // User shape
 const INITIAL_STATE = {
-  venueList: require('../../Fixtures/venues.json').venues,
+  venueList: {},     // require('../../Fixtures/venues.json').venues,
   selectedVenue: null,
   fetching: false
+}
+
+function getVenuesList (state, payload) {
+  switch (payload.response.status) {
+    case 200:
+      state.venueList = payload.response.body
+      return {
+        ...state
+        // fetching: false,
+        // error: null
+      }
+    default:
+      return {
+        ...state,
+        error: 'Failed to Request - Check Network'
+      }
+  }
 }
 
 export function reducer (state = INITIAL_STATE, action) {
@@ -17,10 +32,7 @@ export function reducer (state = INITIAL_STATE, action) {
         fetching: true
       }
     case VenueActions.RECEIVE_VENUES:
-      return {
-        ...state,
-        fetching: true
-      }
+      return getVenuesList(state, action.payload)
     case VenueActions.SELECT_VENUE:
       return {
         ...state,

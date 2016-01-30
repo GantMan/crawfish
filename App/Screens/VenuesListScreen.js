@@ -3,8 +3,12 @@
 import React, { ScrollView, ListView, TouchableOpacity, Image, View, Text, Modal } from 'react-native'
 import { Routes } from '../Navigation/'
 import VenueCell from '../Components/VenueCell'
+import Search from '../Components/Search'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
+import Client from '../Api/Client'
+import * as Venue from '../Api/Venue'
+import { VenueActionCreators } from '../Redux/Actions/VenueActions'
 // import {Icon} from 'react-native-icons'
 import _ from 'lodash'
 
@@ -12,6 +16,7 @@ class VenuesListScreen extends React.Component {
 
   constructor (props) {
     super(props)
+    this.client = new Client()
     let ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
     this.state = {
       dataSource: ds,
@@ -39,6 +44,12 @@ class VenuesListScreen extends React.Component {
       tapFavorites: this.favoritesToggle.bind(this),
       tapSearch: () => this.setState({showModal: true})
     })
+    this.getVenues()
+    // this.props.dispatch(VenueActionCreators.fetchVenues())
+  }
+
+  getVenues () {
+    this.props.dispatch(VenueActionCreators.fetchVenues())
   }
 
   componentWillMount () {
@@ -78,7 +89,7 @@ class VenuesListScreen extends React.Component {
     let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
     let d = R * c // Distance in mi
     let dist = Math.round(d * 100) / 100 // Round to two decimals
-    console.log(dist, 'DISTANCE')
+    // console.log(dist, 'DISTANCE')
     return (dist)
   }
 
@@ -146,11 +157,18 @@ class VenuesListScreen extends React.Component {
     }
   }
 
+  handleSearchPress () {
+    this.setState({showModal: false})
+  }
+
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
     return (
       <View style={styles.background}>
-        { this.renderModalSearch() }
+        <Search
+          isVisible={this.state.showModal}
+          onPress={this.handleSearchPress.bind(this)}
+        />
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
         <View style={styles.overlay}/>
         <ScrollView>
