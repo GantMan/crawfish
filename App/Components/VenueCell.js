@@ -38,7 +38,7 @@ export default class VenueCell extends React.Component {
     ratingUrl: React.PropTypes.string,
     address: React.PropTypes.string,
     city: React.PropTypes.string,
-    distance: React.PropTypes.string,
+    distance: React.PropTypes.number,
     crawfishBoiled: React.PropTypes.string,
     pressDirections: React.PropTypes.func,
     navigator: React.PropTypes.object,
