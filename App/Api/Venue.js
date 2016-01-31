@@ -8,6 +8,6 @@ export function fetchVenues (client, callback) {
       body: require('../Fixtures/venues.json')
     })
   } else {
-    client.get('venues', {}, handleResponse(callback))
+    client.get('venues', {user_email: 'fvonhoven@gmail.com', user_token: 'sTaC2eeeBJwAxsjNYz3m'}, handleResponse(callback))
   }
 }

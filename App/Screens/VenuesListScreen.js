@@ -8,7 +8,6 @@ import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
 import Client from '../Api/Client'
 import * as Venue from '../Api/Venue'
-import { VenueActionCreators } from '../Redux/Actions/VenueActions'
 // import {Icon} from 'react-native-icons'
 import _ from 'lodash'
 
@@ -20,6 +19,7 @@ class VenuesListScreen extends React.Component {
     let ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
     this.state = {
       dataSource: ds,
+      venueList: [],
       showModal: false,
       favoritesOn: false,
       userLat: '',
@@ -30,7 +30,7 @@ class VenuesListScreen extends React.Component {
   static propTypes = {
     navigator: React.PropTypes.object,
     dispatch: React.PropTypes.func,
-    venueList: React.PropTypes.array,
+    venueList: React.PropTypes.object,
     userLat: React.PropTypes.string,
     userLon: React.PropTypes.string
   }
@@ -50,7 +50,9 @@ class VenuesListScreen extends React.Component {
 
   getVenues () {
     Venue.fetchVenues(this.client, (response) => {
-      console.log(response, 'HERE I AM!!!!!!!!')
+      this.setState({venueList: response.body})
+      console.log(this.state.venueList, 'HERE I AM!!!!!!!!')
+      // console.log(response, 'HERE I AM!!!!!!!!')
     })
   }
 
@@ -104,7 +106,12 @@ class VenuesListScreen extends React.Component {
       userLat: position.coords.latitude,
       userLon: position.coords.longitude
     })
-    console.log(this.state.userLat, this.state.userLon, 'LOOK AT ME')
+    console.log(this.state.userLat, this.state.userLon, 'USER POSITION')
+  }
+
+  roundPrice (price) {
+    let roundedPrice = price.toFixed(2)
+    return (roundedPrice)
   }
 
   customRowRender (rowData) {
@@ -113,11 +120,12 @@ class VenuesListScreen extends React.Component {
         <VenueCell
         imageUri={rowData.picture}
         yelpPicture={rowData.yelp_picture}
+        picture={rowData.picture_url}
         title={rowData.name}
         address={rowData.address}
         city={rowData.city}
         distance={this.getDistanceFromLatLonInMiles(this.state.userLat, this.state.userLon, rowData.latitude, rowData.longitude)}
-        crawfishBoiled={rowData.crawfish_boiled}
+        crawfishBoiled={this.roundPrice(rowData.crawfish_boiled)}
         ratingUrl={rowData.rating_url}
         favorite={rowData.favorite}
         toggleFavorite={this.toggleVenueFavorite.bind(this, rowData)}
@@ -176,7 +184,7 @@ class VenuesListScreen extends React.Component {
         <ScrollView>
           <ListView
             style={styles.listy}
-            dataSource={this.state.dataSource.cloneWithRows(this.venues())}
+            dataSource={this.state.dataSource.cloneWithRows(this.state.venueList)}
             renderRow={this.customRowRender.bind(this)}
           />
         </ScrollView>
