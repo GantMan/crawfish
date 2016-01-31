@@ -4,9 +4,9 @@ import { Colors, Metrics } from '../Themes/'
 let containerStyle = {
   flexDirection: 'row',
   borderWidth: 1,
-  borderColor: Colors.cloudGray,
+  borderRadius: 5,
+  borderColor: Colors.lightGray,
   justifyContent: 'space-between',
-  borderRadius: 2,
   height: 40
 }
 
