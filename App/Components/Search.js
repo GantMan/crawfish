@@ -1,6 +1,7 @@
 import React, { View, Text, TouchableOpacity, Modal } from 'react-native'
 // import styles from '../Styles/SearchModalStyle'
 import { Colors } from '../Themes'
+import Dropdown from '../Components/Dropdown'
 
 export default class SearchModal extends React.Component {
 
@@ -16,8 +17,26 @@ export default class SearchModal extends React.Component {
         transparent
         visible={this.props.isVisible}
       >
-        <View style={{top: 64, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center'}}>
-          <View style={{height: 150, backgroundColor: '#383a3d', padding: 10, margin: 20, borderRadius: 5, flex: 1}}>
+        <View style={{backgroundColor: 'rgba(0,0,0,0.5)', flex: 1, justifyContent: 'center'}}>
+          <View style={{height: 300, backgroundColor: '#383a3d', padding: 10, margin: 20, borderRadius: 5}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+              <Dropdown
+                // selected={'Option one'}
+                disabled={false}
+                options={['Crawfish', 'Oysters', 'Shrimp', 'Crabs']}
+                placeholder={'Seafood'}
+                dropWidth={100}
+                // reversed
+              />
+              <Dropdown
+                // selected={'Option one'}
+                disabled={false}
+                options={['1 mi', '2 mi', '5 mi', '10 mi', '< 10 mi']}
+                placeholder={'Distance'}
+                dropWidth={100}
+                // reversed
+              />
+            </View>
             <Text style={{color: 'white'}}>Search View Yo</Text>
             <Text style={{color: 'white'}}>This is where you'd make search stuff</Text>
             <View style={{flexDirection: 'row', justifyContent: 'space-around'}} >
