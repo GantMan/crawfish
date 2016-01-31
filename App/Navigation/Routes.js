@@ -23,4 +23,11 @@ export default new class Routes {
       component: require('../Screens/DetailsScreen')
     }
   }
+
+  get LoginScreen () {
+    return {
+      title: 'LOGIN',
+      component: require('../Screens/LoginScreen')
+    }
+  }
 }

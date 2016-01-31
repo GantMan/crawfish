@@ -7,8 +7,8 @@ export default StyleSheet.create({
     borderRadius: 5,
     shadowColor: Colors.black,
     shadowOffset: {
-      height: 7,
-      width: 7
+      height: 3,
+      width: 3
     },
     shadowOpacity: 0.55,
     shadowRadius: 2

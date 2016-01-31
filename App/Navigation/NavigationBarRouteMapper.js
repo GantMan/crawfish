@@ -3,6 +3,7 @@
 import React, { Text, TouchableOpacity } from 'react-native'
 import styles from '../Styles/NavigationStyle'
 import NavButtons from './NavButtons'
+import DebugSettings from '../Config/DebugSettings'
 
 export default {
 
@@ -11,7 +12,12 @@ export default {
       case 'SEARCH':
         return NavButtons.searchButton(navigator.state.tapSearch)
       case 'FAVORITE':
-        return NavButtons.favoritesButton(navigator.state.tapFavorites, navigator.state.favoritesOn)
+        if (DebugSettings.userLoggedIn) {
+          return NavButtons.favoritesButton(navigator.state.tapFavorites, navigator.state.favoritesOn)
+        } else {
+          return NavButtons.favoritesButton(navigator.state.tapLogin)
+        }
+        break
       default:
         return null
     }

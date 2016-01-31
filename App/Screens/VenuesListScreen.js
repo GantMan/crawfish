@@ -38,12 +38,17 @@ class VenuesListScreen extends React.Component {
   componentDidMount () {
     this.props.navigator.setState({
       tapFavorites: this.favoritesToggle.bind(this),
-      tapSearch: () => this.setState({showModal: true})
+      tapSearch: () => this.setState({showModal: true}),
+      tapLogin: this.userLogin.bind(this)
     })
   }
 
   componentWillMount () {
     this.getLocation()
+  }
+
+  userLogin () {
+    this.props.navigator.push(Routes.LoginScreen)
   }
 
   favoritesToggle () {
@@ -147,7 +152,8 @@ class VenuesListScreen extends React.Component {
     }
   }
 
-  handleSearchPress () {
+  handleSearchPress (data) {
+    console.log(data)
     this.setState({showModal: false})
   }
 
