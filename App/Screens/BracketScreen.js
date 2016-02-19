@@ -26,19 +26,6 @@ class DetailsScreen extends React.Component {
     venueList: React.PropTypes.array
   }
 
-  componentWillMount () {
-    let currentVenueIndex = _.findIndex(this.props.venueList, 'name', this.props.selectedVenue)
-    this.setState({ currentVenue: this.props.venueList[currentVenueIndex] || this.props.venueList[0] })
-    this.props.navigator.setState({
-      leftButton: null
-      // rightButton: null
-    })
-  }
-
-  submitButton () {
-    window.alert('Submitting')
-  }
-
   render () {
     return (
       <View style={styles.background}>
