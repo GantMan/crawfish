@@ -14,6 +14,7 @@ class DetailsScreen extends React.Component {
     super(props)
     this.state = {
       currentVenue: {}
+      // <Image source={require('../Images/wallpaper.jpg')}/>
     }
   }
 
@@ -29,11 +30,15 @@ class DetailsScreen extends React.Component {
   render () {
     return (
       <View style={styles.background}>
-        <Image source={require('../Images/wallpaper.jpg')}/>
+        <Image style={styles.backgroundImage} source={require('../Images/wallpaper.jpg')}/>
+        <View style={{top: 0, bottom: 0, left: 0, right: 0, position: 'absolute', backgroundColor: 'rgba(255,255,255,0.15)'}}/>
         <ScrollView style={{paddingTop: 100}}>
-          <Bracket />
+
+            <Bracket />
+
         </ScrollView>
       </View>
+
     )
   }
 }
