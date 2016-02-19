@@ -24,6 +24,13 @@ export default new class Routes {
     }
   }
 
+  get BracketScreen () {
+    return {
+      title: 'React Native Fun',
+      component: require('../Screens/BracketScreen')
+    }
+  }
+
   get LoginScreen () {
     return {
       title: 'LOGIN',
