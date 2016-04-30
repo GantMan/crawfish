@@ -30,4 +30,11 @@ export default new class Routes {
       component: require('../Screens/LoginScreen')
     }
   }
+
+  get SuggestVenueScreen () {
+    return {
+      title: 'Suggest Venue',
+      component: require('../Screens/SuggestVenueScreen')
+    }
+  }
 }

@@ -17,7 +17,7 @@ export default StyleSheet.create({
   },
   button: {
     justifyContent: 'center',
-    borderRadius: 5,
+    borderRadius: 20,
     shadowColor: Colors.black,
     shadowOffset: {
       height: 3,

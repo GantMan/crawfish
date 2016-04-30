@@ -2,9 +2,15 @@ import { StyleSheet } from 'react-native'
 import { Colors, Metrics } from '../Themes/'
 
 export default StyleSheet.create({
+
+  container: {
+    flex: 1,
+    height: Metrics.screenHeight,
+    justifyContent: 'center'
+  },
   button: {
     justifyContent: 'center',
-    borderRadius: 5,
+    borderRadius: 20,
     shadowColor: Colors.black,
     shadowOffset: {
       height: 7,

@@ -22,6 +22,7 @@ export function reducer (state = INITIAL_STATE, action) {
         fetching: true
       }
     case VenueActions.SELECT_VENUE:
+      console.log('Heyy I work')
       return {
         ...state,
         selectedVenue: action.venue

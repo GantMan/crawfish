@@ -1,7 +1,7 @@
 'use strict'
 
 import DebugSettings from '../Config/DebugSettings'
-// import {handleResponse} from './Shared'
+import {handleResponse} from './Shared'
 
 export function fetch (client, callback) {
   if (DebugSettings.useFixtures) {
@@ -10,6 +10,6 @@ export function fetch (client, callback) {
       body: require('../Fixtures/venues.json')
     })
   } else {
-    // client.get('venues', {}, handleResponse(callback))
+    client.get('venues', {}, handleResponse(callback))
   }
 }

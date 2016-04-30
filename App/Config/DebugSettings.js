@@ -1,7 +1,9 @@
 'use strict'
 
 const SETTINGS = {
-  useFixtures: true
+  useFixtures: false,
+  userLoggedIn: false,
+  localServer: false
 }
 
 export default SETTINGS

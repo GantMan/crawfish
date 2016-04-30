@@ -14,6 +14,9 @@ export default StyleSheet.create({
     position: 'absolute',
     resizeMode: 'stretch'
   },
+  scroll: {
+    height: Metrics.screenHeight + 200
+  },
   overlay: {
     top: 0,
     bottom: 0,
@@ -141,12 +144,23 @@ export default StyleSheet.create({
     paddingVertical: 10,
     flexDirection: 'row'
   },
-  discrepancyContainer: {
-    paddingLeft: 10,
+  textInputContainer: {
+    paddingLeft: 15,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    marginTop: 40
+  },
+  priceLabel: {
+    marginRight: 45,
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: Fonts.bold,
+    alignSelf: 'center'
+  },
+  textInput: {
     borderRadius: 5,
-    marginTop: 20,
     alignSelf: 'center',
-    width: Metrics.screenWidth - 40,
+    width: 80,
     height: 40,
     backgroundColor: Colors.lightGray
   },

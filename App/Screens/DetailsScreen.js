@@ -1,19 +1,21 @@
 'use strict'
 
-import React, { ScrollView, View, MapView, TouchableHighlight, Image, Text, TextInput } from 'react-native'
+import React, { ScrollView, View, MapView, LinkingIOS, TouchableHighlight, Image, Text, TextInput, DeviceEventEmitter } from 'react-native'
 // import { Routes } from '../Navigation/'
 import _ from 'lodash'
 import {connect} from 'react-redux/native'
 import {Icon} from 'react-native-icons'
 import styles from '../Styles/DetailsScreenStyle'
-import { Images } from '../Themes'
+import { Images, Metrics } from '../Themes'
 
 class DetailsScreen extends React.Component {
 
   constructor (props) {
     super(props)
     this.state = {
-      currentVenue: {}
+      currentVenue: {},
+      inputPrice: '',
+      visibleHeight: Metrics.screenHeight
     }
   }
 
@@ -23,7 +25,8 @@ class DetailsScreen extends React.Component {
     latitude: React.PropTypes.string,
     longitude: React.PropTypes.string,
     selectedVenue: React.PropTypes.string,
-    venueList: React.PropTypes.array
+    venueList: React.PropTypes.array,
+    inputPrice: React.PropTypes.string
   }
 
   componentWillMount () {
@@ -33,10 +36,27 @@ class DetailsScreen extends React.Component {
       leftButton: null
       // rightButton: null
     })
+    DeviceEventEmitter.addListener('keyboardDidShow', this.keyboardWillShow.bind(this))
+    DeviceEventEmitter.addListener('keyboardDidHide', this.keyboardWillHide.bind(this))
+    this.mounted = true
+  }
+
+  componentWillUnmount () {
+    this.mounted = false
+  }
+
+  visitAddress (address) {
+    // https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
+    // let cleanAddress = Utilities.nullifyNewlines(address)
+    // let url = `http://maps.apple.com/?address=${cleanAddress}`
+    LinkingIOS.openURL('tel:1-504-450-9539')
   }
 
   submitButton () {
-    window.alert('Submitting')
+    console.log(this.state.inputPrice, this.state.currentVenue.name, this.state.currentVenue.yelp_id)
+    this.refs.inputPrice.blur()
+    // LinkingIOS.openURL('tel:1-504-909-4268')
+    // window.alert(this.state.inputPrice, 'Submitting')
   }
 
   handleClosed (closed) {
@@ -47,12 +67,27 @@ class DetailsScreen extends React.Component {
     }
   }
 
+  textChanged (newText) {
+    this.state.inputPrice = newText
+  }
+
+  keyboardWillShow (e) {
+    let newSize = Metrics.screenHeight - e.endCoordinates.height
+    this.setState({visibleHeight: newSize})
+    this.refs.scrolly.scrollTo(475, 0)
+  }
+
+  keyboardWillHide (e) {
+    this.setState({visibleHeight: Metrics.screenHeight})
+    if (this.refs.scrolly) this.refs.scrolly.scrollTo(0, 0)
+  }
+
   render () {
     return (
-      <View style={styles.background}>
+      <View style={[styles.background, {height: this.state.visibleHeight}]}>
         <Image style={styles.backgroundImage} source={require('../Images/lightWood.jpg')}/>
         <View style={styles.overlay}/>
-        <ScrollView>
+        <ScrollView ref='scrolly' keyboardShouldPersistTaps style={styles.scroll}>
           <View style={styles.mapContainer}>
             <MapView style={styles.map}
               scrollEnabled = {false}
@@ -137,12 +172,24 @@ class DetailsScreen extends React.Component {
 
             <View style={styles.line}/>
 
-            <TextInput
-              style={styles.discrepancyContainer}
-              placeholder='Enter New Price'
-              placeholderColor='red'
-              textAlign='center'
-            />
+            <Text style={[styles.dataLabel, {alignSelf: 'center', marginTop: 20}]}>Price Discrepancy?</Text>
+            <View style={styles.textInputContainer}>
+              <Text style={styles.priceLabel}>Price:</Text>
+              <TextInput
+                // clearButtonMode='always'
+                enablesReturnKeyAutomatically
+                blurOnSubmit
+                keyboardAppearance='dark'
+                ref='inputPrice'
+                keyboardType='numeric'
+                returnKeyType='default'
+                style={styles.textInput}
+                onChangeText={this.textChanged.bind(this)}
+                textAlign='center'
+                placeholder='$'
+                value={this.state.inputPrice}
+              />
+            </View>
             <TouchableHighlight
               style={styles.submitButton}
               underlayColor='red'

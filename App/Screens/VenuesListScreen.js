@@ -6,7 +6,9 @@ import VenueCell from '../Components/VenueCell'
 import styles from '../Styles/VenuesListScreenStyle'
 import {connect} from 'react-redux/native'
 import Search from '../Components/Search'
-// import {Icon} from 'react-native-icons'
+import {Icon} from 'react-native-icons'
+import * as actions from '../Redux/Actions/ActionCreators'
+import { Colors, Fonts, Metrics } from '../Themes'
 import _ from 'lodash'
 
 class VenuesListScreen extends React.Component {
@@ -58,7 +60,8 @@ class VenuesListScreen extends React.Component {
   }
 
   cellPress (rowData) {
-    this.props.dispatch({ type: 'SELECT_VENUE', venue: rowData.name, time: Date.now() })
+    // this.props.dispatch({ type: 'SELECT_VENUE', venue: rowData.name, time: Date.now() })
+    this.props.dispatch(actions.setVenue(rowData.name))
     this.props.navigator.push(Routes.DetailsScreen)
   }
 
@@ -157,6 +160,28 @@ class VenuesListScreen extends React.Component {
     this.setState({showModal: false})
   }
 
+  closeHeader () {
+    window.alert('Closing')
+  }
+
+  makeHeader () {
+    return (
+      <View style={{flex: 1, paddingLeft: 10, marginBottom: 10, height: 30, flexDirection: 'row', backgroundColor: Colors.lightGray}} >
+        <Text allowFontScaling={false} style={{flex: 1, fontSize: Metrics.fonts.regular, color: Colors.charcoal, fontFamily: Fonts.bold, alignSelf: 'center'}}>Filtered Results</Text>
+        <TouchableOpacity onPress={this.closeHeader.bind(this)} style={{width: 20, height: 20, justifyContent: 'center', alignSelf: 'center'}}>
+          <Icon
+            name='fontawesome|times-circle'
+            size={16}
+            width={20}
+            height={20}
+            color={Colors.charcoal}
+            style={{alignSelf: 'flex-end', flex: 1, marginRight: 10, alignItems: 'center'}}
+          />
+        </TouchableOpacity>
+      </View>
+    )
+  }
+
 // <Image source={require('../Images/lightWood.jpg')}>
   render () {
     return (
@@ -169,6 +194,7 @@ class VenuesListScreen extends React.Component {
         <View style={styles.overlay}/>
         <ScrollView>
           <ListView
+            renderSectionHeader={this.makeHeader.bind(this)}
             style={styles.listy}
             dataSource={this.state.dataSource.cloneWithRows(this.venues())}
             renderRow={this.customRowRender.bind(this)}
